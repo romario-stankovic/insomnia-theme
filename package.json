@@ -1,0 +1,29 @@
+{
+    "name": "modern-code-theme",
+    "version": "1.0.0",
+    "publisher": "romario-stankovic",
+    "license": "MIT",
+    "displayName": "Modern Code",
+    "description": "A Modern Theme for Visual Studio Code",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Modern Code (Dark)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/modern-code-dark-color-theme.json"
+            }
+        ]
+    },
+    "scripts": {
+        "dev": "nodemon src/index.js --ignore themes/*"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.19"
+    }
+}
