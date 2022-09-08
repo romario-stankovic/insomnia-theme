@@ -1,14 +1,11 @@
-const editor = require("./editor");
-const tokens = require("./tokens");
 const fs = require("fs");
+const darkTheme = require("./dark");
 
-const result = {
-    name: "Modern Code - Dark",
-    colors: editor,
-    tokenColors: tokens.tokenColors,
-    semanticHighlighting: tokens.semanticHighlighting,
-    semanticTokenColors: tokens.semanticTokenColors,
+const themes = [darkTheme];
 
+for(let t of themes) {
+    let file = t.theme.name.toLowerCase().replace(/ /g, "-") + "-color-theme.json";
+    fs.writeFile("./themes/" + file, JSON.stringify(t.theme, null, 4), () => {
+        console.log("Wrote: " + t.theme.name);
+    });
 }
-
-fs.writeFileSync("./themes/modern-code-dark-color-theme.json", JSON.stringify(result, null, 4));

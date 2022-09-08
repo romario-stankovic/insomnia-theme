@@ -1,7 +1,7 @@
 # Change Log
 
-Changes to the "Modern Code" Theme are noted here
+Changes to the "Insomnia Theme" Theme are noted here
 
-## [Unreleased] - Date
+## [1.0.0] - 2022-09-08
 
 - Initial release

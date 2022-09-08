@@ -105,7 +105,7 @@ const progressBar = {
 };
 
 const list = {
-    "list.activeSelectionBackground": colors.foreground,
+    "list.activeSelectionBackground": colors.foreground + "AA",
     "list.activeSelectionForeground": colors.text,
     "list.activeSelectionIconForeground": colors.text,
 

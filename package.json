@@ -1,24 +1,44 @@
 {
-    "name": "modern-code-theme",
+    "name": "insomnia-theme",
+    "displayName": "Insomnia Theme",
+    "description": "A modern theme for Visual Studio Code",
     "version": "1.0.0",
-    "publisher": "romario-stankovic",
+    "publisher": "Romario Stankovic",
     "license": "MIT",
-    "displayName": "Modern Code",
-    "description": "A Modern Theme for Visual Studio Code",
     "engines": {
         "vscode": "^1.70.0"
     },
     "categories": [
         "Themes"
     ],
+    "keywords": [
+        "modern",
+        "dark",
+        "theme",
+        "insomnia"
+    ],
     "contributes": {
         "themes": [
             {
-                "label": "Modern Code (Dark)",
+                "label": "Insomnia (Dark)",
                 "uiTheme": "vs-dark",
-                "path": "./themes/modern-code-dark-color-theme.json"
+                "path": "./themes/insomnia-dark-color-theme.json"
             }
         ]
+    },
+    "preview": false,
+    "qna": "marketplace",
+    "extensionKind": [
+        "ui",
+        "workspace"
+    ],
+    "icon": "icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Romario-Stankovic/InsomniaTheme"
+    },
+    "bugs": {
+        "url": "https://github.com/Romario-Stankovic/InsomniaTheme/issues"
     },
     "scripts": {
         "dev": "nodemon src/index.js --ignore themes/*"

@@ -11,8 +11,8 @@ const colors = {
     backgroundLight: "#1c1f22",
     backgroundLighter: "#262b31",
     
-    foreground: "#09629d", // Change this to a darker blue
-    foregroundLight: "#1283d0", // Change this to a darker blue
+    foreground: "#2466a9",
+    foregroundLight: "#2975c2",
     text: "#dddddd",
 
     /* Source Control */
