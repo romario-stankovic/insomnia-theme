@@ -28,7 +28,7 @@ const text = {
     /* "textBlockQuote.background": colors.test, */ //? Unknown
     /* "textBlockQuote.border": colors.test, */     //? Unknown
     /* "textCodeBlock.background": colors.test, */  //? Unknown
-    "textLink.activeForeground": colors.foreground,
+    "textLink.activeForeground": colors.foregroundLighter,
     "textLink.foreground": colors.foregroundLight,
     /* "textPreformat.foreground": colors.test, */ //* Unset
     /* "textSeparator.foreground": colors.test, */ //? Unknown
@@ -260,7 +260,7 @@ const editor = {
     "editorUnicodeHighlight.border": colors.warning,
     "editorUnicodeHighlight.background": colors.warningBackground,
 
-    "editorLink.activeForeground": colors.foregroundLight,
+    "editorLink.activeForeground": colors.foregroundLighter,
 
     "editor.rangeHighlightBackground": colors.foreground + "66",
     "editor.rangeHighlightBorder": colors.hidden,
@@ -391,8 +391,8 @@ const widgets = {
     "editorSuggestWidget.background": colors.background,
     "editorSuggestWidget.border": colors.backgroundLighter,
     "editorSuggestWidget.foreground": colors.text,
-    "editorSuggestWidget.focusHighlightForeground": colors.foregroundLight,
-    "editorSuggestWidget.highlightForeground": colors.foregroundLight,
+    "editorSuggestWidget.focusHighlightForeground": colors.foregroundLighter,
+    "editorSuggestWidget.highlightForeground": colors.foregroundLighter,
     "editorSuggestWidget.selectedBackground": colors.foreground + "77",
     "editorSuggestWidget.selectedForeground": colors.text,
     "editorSuggestWidget.selectedIconForeground": colors.text,
@@ -400,7 +400,7 @@ const widgets = {
     "editorHoverWidget.foreground": colors.text,
     "editorHoverWidget.background": colors.background,
     "editorHoverWidget.border": colors.backgroundLighter,
-    "editorHoverWidget.highlightForeground": colors.foregroundLight,
+    "editorHoverWidget.highlightForeground": colors.foregroundLighter,
     "editorHoverWidget.statusBarBackground": colors.backgroundLighter,
     "editorGhostText.border": colors.hidden,
     "editorGhostText.background": colors.hidden,

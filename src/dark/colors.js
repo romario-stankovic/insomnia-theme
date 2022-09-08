@@ -13,6 +13,7 @@ const colors = {
     
     foreground: "#2466a9",
     foregroundLight: "#2975c2",
+    foregroundLighter: "#318ce8",
     text: "#dddddd",
 
     /* Source Control */
