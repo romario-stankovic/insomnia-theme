@@ -121,7 +121,7 @@ const list = {
 
     "list.inactiveSelectionBackground": colors.foreground + "55",
     "list.inactiveSelectionForeground": colors.text,
-    "list.inactiveSelectionIconForeground": colors.text,
+    /* "list.inactiveSelectionIconForeground": colors.test, */ //* Unset
     "list.inactiveFocusBackground": colors.background,
     "list.inactiveFocusOutline": colors.hidden,
     /* "list.invalidItemForeground": colors.test, */ //? Unknown
@@ -134,7 +134,7 @@ const list = {
     /* "list.filterMatchBackground": colors.test, */ //* Unset
     "list.filterMatchBorder": colors.hidden,
     /* "list.deemphasizedForeground": colors.test, */ //? Unknown
-    "tree.indentGuidesStroke": colors.text + "33", //? Unknown
+    "tree.indentGuidesStroke": colors.text + "33",
     /* "tree.tableColumnsBorder": colors.test, */ //? Unknown
     /* "tree.tableOddRowsBackground": colors.test, */ //? Unknown
 
@@ -324,12 +324,12 @@ const editor = {
     /* "editorOverviewRuler.modifiedForeground": colors.test, */ //* Unset
     /* "editorOverviewRuler.addedForeground": colors.test, */ //* Unset
     /* "editorOverviewRuler.deletedForeground": colors.test, */ //* Unset
-    "editorOverviewRuler.errorForeground": colors.error, //* Unset
+    "editorOverviewRuler.errorForeground": colors.error,
     /* "editorOverviewRuler.warningForeground": colors.test, */ //* Unset
     "editorOverviewRuler.infoForeground": colors.info,
     /* "editorOverviewRuler.bracketMatchForeground": colors.test, */ //* Unset
 
-    "editorError.foreground": colors.error, //* Unset
+    "editorError.foreground": colors.error,
     /* "editorError.border": colors.test, */ //* Unset
     /* "editorError.background": colors.test, */ //* Unset
 
@@ -337,7 +337,7 @@ const editor = {
     /* "editorWarning.border": colors.test, */ //* Unset
     /* "editorWarning.background": colors.test, */ //* Unset
     
-    "editorInfo.foreground": colors.info, //* Unset
+    "editorInfo.foreground": colors.info,
     /* "editorInfo.border": colors.test, */ //* Unset
     /* "editorInfo.background": colors.test, */ //* Unset
 
@@ -429,7 +429,7 @@ const peekView = {
     /* "peekViewEditor.matchHighlightBackground": colors.test, */ //* Unset
     "peekViewEditor.matchHighlightBorder": colors.hidden,
     "peekViewResult.background": colors.backgroundLight,
-    "peekViewResult.fileForeground": colors.text, //* Unset
+    "peekViewResult.fileForeground": colors.text,
     "peekViewResult.lineForeground": colors.text + "BB",
     /* "peekViewResult.matchHighlightBackground": colors.test, */ //* Unset
     "peekViewResult.selectionBackground": colors.foreground + "99",
@@ -468,12 +468,12 @@ const panel = {
     "panelTitle.activeBorder": colors.foreground,
     "panelTitle.activeForeground": colors.text,
     "panelTitle.inactiveForeground": colors.text + "77",
-    /* "panelInput.border": colors.test, */ //* Unknown
+    /* "panelInput.border": colors.test, */ //? Unknown
     "panelSection.border": colors.backgroundLighter,
     /* "panelSection.dropBackground": colors.test, */ //* Unset
     "panelSectionHeader.background": colors.backgroundLight,
     "panelSectionHeader.foreground": colors.text,
-    "panelSectionHeader.border": colors.test, //* Unset
+    /* "panelSectionHeader.border": colors.test, */ //? Unknown
 };
 
 const statusBar = {
