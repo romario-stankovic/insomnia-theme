@@ -370,9 +370,9 @@ const editor = {
 
 const diffEditor = {
     "diffEditor.insertedTextBackground": colors.addedDiff + "33",
-    "diffEditor.insertedTextBorder": colors.hidden,
+    /* "diffEditor.insertedTextBorder": colors.hidden, */ //* Unset
     "diffEditor.removedTextBackground": colors.removedDiff + "33",
-    "diffEditor.removedTextBorder": colors.hidden,
+    /* "diffEditor.removedTextBorder": colors.hidden, */ //* Unset
     "diffEditor.border": colors.backgroundLighter,
     "diffEditor.diagonalFill": colors.backgroundLighter,
     "diffEditor.insertedLineBackground": colors.addedDiff + "22",
