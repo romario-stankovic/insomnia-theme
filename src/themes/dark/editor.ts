@@ -1,13 +1,15 @@
-const colors = require("./colors");
+import { colors } from "./colors";
+
+import { Editor } from "../../interface/editor";
 
 // Reference: https://code.visualstudio.com/api/references/theme-color
 
-const contrast = {
+const contrast : Editor.Contrast = {
     "contrastActiveBorder": colors.hidden,
     "contrastBorder": colors.hidden,
 }
 
-const base = {
+const base : Editor.Base = {
     "focusBorder": colors.foreground,
     "foreground": colors.text,
     "disabledForeground": colors.text + "77",
@@ -19,28 +21,28 @@ const base = {
     "sash.hoverBorder": colors.foreground,
 };
 
-const window = {
+const window : Editor.Window = {
     "window.activeBorder": colors.hidden,
     "window.inactiveBorder": colors.hidden,
 };
 
-const text = {
-    /* "textBlockQuote.background": colors.test, */ //? Unknown
-    /* "textBlockQuote.border": colors.test, */     //? Unknown
-    /* "textCodeBlock.background": colors.test, */  //? Unknown
+const text : Editor.Text = {
+    "textBlockQuote.background": colors.unset, //? Unknown
+    "textBlockQuote.border": colors.unset,     //? Unknown
+    "textCodeBlock.background": colors.unset,  //? Unknown
     "textLink.activeForeground": colors.foregroundLighter,
     "textLink.foreground": colors.foregroundLight,
-    /* "textPreformat.foreground": colors.test, */ //* Unset
-    /* "textSeparator.foreground": colors.test, */ //? Unknown
+    "textPreformat.foreground": colors.unset, //* Unset
+    "textSeparator.foreground": colors.unset, //? Unknown
 };
 
-const actions = {
+const actions : Editor.Actions = {
     "toolbar.hoverBackground": colors.white + "17",
     "toolbar.hoverOutline": colors.hidden,
     "toolbar.activeBackground": colors.white + "33"
 };
 
-const button = {
+const button : Editor.Buttons = {
     "button.background": colors.foreground,
     "button.foreground": colors.text,
     "button.border": colors.hidden,
@@ -51,20 +53,20 @@ const button = {
     "button.secondaryHoverBackground": colors.white + "33",
 };
 
-const checkbox = {
+const checkbox : Editor.CheckBox = {
     "checkbox.background": colors.backgroundLighter,
     "checkbox.foreground": colors.text,
     "checkbox.border": colors.hidden
 };
 
-const dropdown = {
+const dropdown : Editor.Dropdown = {
     "dropdown.background": colors.backgroundLighter,
     "dropdown.listBackground": colors.backgroundLighter,
     "dropdown.border": colors.backgroundLighter,
     "dropdown.foreground": colors.text,
 };
 
-const input = {
+const input : Editor.Input = {
     "input.background": colors.backgroundLighter,
     "input.border": colors.hidden,
     "input.foreground": colors.text,
@@ -88,23 +90,23 @@ const input = {
     "inputValidation.warningBorder": colors.warning,
 };
 
-const scrollbar = {
+const scrollbar : Editor.Scrollbar = {
     "scrollbar.shadow": colors.shadow,
     "scrollbarSlider.activeBackground": colors.foreground + "BB",
     "scrollbarSlider.background": colors.foreground + "77",
     "scrollbarSlider.hoverBackground": colors.foreground + "99",
 };
 
-const badge = {
+const badge : Editor.Badge = {
     "badge.foreground": colors.text,
     "badge.background": colors.foreground
 };
 
-const progressBar = {
+const progressBar : Editor.ProgressBar = {
     "progressBar.background": colors.foreground,
 };
 
-const list = {
+const list : Editor.List = {
     "list.activeSelectionBackground": colors.foreground + "AA",
     "list.activeSelectionForeground": colors.text,
     "list.activeSelectionIconForeground": colors.text,
@@ -112,35 +114,35 @@ const list = {
     "list.dropBackground": colors.backgroundLighter,
     "list.focusBackground": colors.foreground + "77",
     "list.focusForeground": colors.text,
-    /* "list.focusHighlightForeground": colors.test, */ //? Unknown
+    "list.focusHighlightForeground": colors.unset, //? Unknown
     "list.focusOutline": colors.hidden,
     "list.focusAndSelectionOutline": colors.foreground,
-    /* "list.highlightForeground": colors.test, */ //? Unknown
+    "list.highlightForeground": colors.unset, //? Unknown
     "list.hoverBackground": colors.background,
     "list.hoverForeground": colors.text,
 
     "list.inactiveSelectionBackground": colors.foreground + "55",
     "list.inactiveSelectionForeground": colors.text,
-    /* "list.inactiveSelectionIconForeground": colors.test, */ //* Unset
+    "list.inactiveSelectionIconForeground": colors.unset, //* Unset
     "list.inactiveFocusBackground": colors.background,
     "list.inactiveFocusOutline": colors.hidden,
-    /* "list.invalidItemForeground": colors.test, */ //? Unknown
+    "list.invalidItemForeground": colors.unset, //? Unknown
     "list.errorForeground": colors.error,
     "list.warningForeground": colors.warning,
     "listFilterWidget.background": colors.backgroundDark,
-    /* "listFilterWidget.outline": colors.test, */ //? Unknown
-    /* "listFilterWidget.noMatchesOutline": colors.test, */ //? Unknown
+    "listFilterWidget.outline": colors.unset, //? Unknown
+    "listFilterWidget.noMatchesOutline": colors.unset, //? Unknown
     "listFilterWidget.shadow": colors.shadow,
-    /* "list.filterMatchBackground": colors.test, */ //* Unset
+    "list.filterMatchBackground": colors.unset, //* Unset
     "list.filterMatchBorder": colors.hidden,
-    /* "list.deemphasizedForeground": colors.test, */ //? Unknown
+    "list.deemphasizedForeground": colors.unset, //? Unknown
     "tree.indentGuidesStroke": colors.text + "33",
-    /* "tree.tableColumnsBorder": colors.test, */ //? Unknown
-    /* "tree.tableOddRowsBackground": colors.test, */ //? Unknown
+    "tree.tableColumnsBorder": colors.unset, //? Unknown
+    "tree.tableOddRowsBackground": colors.unset, //? Unknown
 
 };
 
-const activityBar = {
+const activityBar : Editor.ActivityBar = {
     "activityBar.background": colors.backgroundDark,
     "activityBar.dropBorder": colors.foreground,
     "activityBar.foreground": colors.foregroundLight,
@@ -151,38 +153,41 @@ const activityBar = {
     "activityBar.activeBorder": colors.foreground,
     "activityBar.activeBackground": colors.backgroundLight,
     "activityBar.activeFocusBorder": colors.foreground,
+    "activityBarItem.settingsProfilesForeground": colors.text + "99",
+    "activityBarItem.settingsProfilesHoverForeground": colors.foregroundLighter,
+    "activityBarItem.settingsProfilesBackground": colors.backgroundLight
 };
 
-const sideBar = {
+const sideBar : Editor.SideBar = {
     "sideBar.background": colors.backgroundLight,
     "sideBar.foreground": colors.text,
     "sideBar.border": colors.hidden,
-    /* "sideBar.dropBackground": colors.test, */ //* Unset
+    "sideBar.dropBackground": colors.unset, //* Unset
     "sideBarTitle.foreground": colors.text,
     "sideBarSectionHeader.background": colors.backgroundLighter,
     "sideBarSectionHeader.foreground": colors.text,
     "sideBarSectionHeader.border": colors.backgroundLight,
 };
 
-const miniMap = {
-    /* "minimap.findMatchHighlight": colors.test,  *///* Unset
-    /* "minimap.selectionHighlight": colors.test, */ //* Unset
+const miniMap : Editor.Minimap = {
+    "minimap.findMatchHighlight": colors.unset, //* Unset
+    "minimap.selectionHighlight": colors.unset, //* Unset
     "minimap.errorHighlight": colors.error,
     "minimap.warningHighlight": colors.warning,
     "minimap.background": colors.background,
-    /* "minimap.selectionOccurrenceHighlight": colors.test, */ //* Unset
+    "minimap.selectionOccurrenceHighlight": colors.unset, //* Unset
     "minimap.foregroundOpacity": colors.white,
-    /* "minimapSlider.background": colors.test, */  //* Unset
-    /* "minimapSlider.hoverBackground": colors.test, */  //* Unset
-    /* "minimapSlider.activeBackground": colors.test, */  //* Unset
-    /* "minimapGutter.addedBackground": colors.test, */  //* Unset
-    /* "minimapGutter.modifiedBackground": colors.test, */  //* Unset
-    /* "minimapGutter.deletedBackground": colors.test, */  //* Unset
+    "minimapSlider.background": colors.unset,  //* Unset
+    "minimapSlider.hoverBackground": colors.unset,  //* Unset
+    "minimapSlider.activeBackground": colors.unset,  //* Unset
+    "minimapGutter.addedBackground": colors.unset,  //* Unset
+    "minimapGutter.modifiedBackground": colors.unset,  //* Unset
+    "minimapGutter.deletedBackground": colors.unset,  //* Unset
 };
 
-const tabGroup = {
+const tabGroup : Editor.TabGroup = {
     "editorGroup.border": colors.backgroundLighter,
-    /* "editorGroup.dropBackground": colors.test, */ //* Unset
+    "editorGroup.dropBackground": colors.unset, //* Unset
     "editorGroupHeader.noTabsBackground": colors.backgroundDark,
     "editorGroupHeader.tabsBackground": colors.backgroundDark,
     "editorGroupHeader.tabsBorder": colors.hidden,
@@ -209,20 +214,20 @@ const tabGroup = {
     "tab.unfocusedInactiveForeground": colors.text + "44",
     "tab.hoverBackground": colors.background,
     "tab.unfocusedHoverBackground": colors.background,
-    /* "tab.hoverForeground": colors.test, */ //* Unset
-    /* "tab.unfocusedHoverForeground": colors.test, */ //* Unset
-    /* "tab.hoverBorder": colors.test, */ //* Unset
-    /* "tab.unfocusedHoverBorder": colors.test, */ //* Unset
+    "tab.hoverForeground": colors.unset, //* Unset
+    "tab.unfocusedHoverForeground": colors.unset, //* Unset
+    "tab.hoverBorder": colors.unset, //* Unset
+    "tab.unfocusedHoverBorder": colors.unset, //* Unset
     "tab.activeModifiedBorder": colors.foreground,
     "tab.inactiveModifiedBorder": colors.foreground + "77",
     "tab.unfocusedActiveModifiedBorder": colors.foreground + "77",
     "tab.unfocusedInactiveModifiedBorder": colors.foreground + "44",
     "editorPane.background": colors.backgroundLight,
-    /* "sideBySideEditor.horizontalBorder": colors.test, */ //? Unknown
-    /* "sideBySideEditor.verticalBorder": colors.test, */ //? Unknown
+    "sideBySideEditor.horizontalBorder": colors.unset, //? Unknown
+    "sideBySideEditor.verticalBorder": colors.unset, //? Unknown
 };
 
-const editor = {
+const editor : Editor.Editor = {
     "editor.background": colors.background,
     "editor.foreground": colors.text,
     "editorLineNumber.foreground": colors.text + "77",
@@ -231,7 +236,7 @@ const editor = {
     "editorCursor.foreground": colors.text + "CC",
 
     "editor.selectionBackground": colors.foreground + "99",
-    /* "editor.selectionForeground": colors.test, */ //* Unset
+    "editor.selectionForeground": colors.unset, //* Unset
     "editor.inactiveSelectionBackground": colors.foreground + "77",
     "editor.selectionHighlightBackground": colors.foreground + "66",
     "editor.selectionHighlightBorder": colors.hidden,
@@ -241,15 +246,15 @@ const editor = {
     "editor.wordHighlightStrongBackground": colors.foreground + "33",
     "editor.wordHighlightStrongBorder": colors.hidden,
 
-    /* "editor.findMatchBackground": colors.test, */ //* Unset
-    /* "editor.findMatchHighlightBackground": colors.test, */ //* Unset
+    "editor.findMatchBackground": colors.unset, //* Unset
+    "editor.findMatchHighlightBackground": colors.unset, //* Unset
     "editor.findRangeHighlightBackground": colors.foreground + "66",
     "editor.findMatchBorder": colors.hidden,
     "editor.findMatchHighlightBorder": colors.hidden,
-    /* "editor.findRangeHighlightBorder": colors.test, */ //* Unset
+    "editor.findRangeHighlightBorder": colors.unset, //* Unset
 
-    /* "searchEditor.findMatchBackground": colors.test, */ //* Unset
-    /* "searchEditor.findMatchBorder": colors.test, */ //* Unset
+    "searchEditor.findMatchBackground": colors.unset, //* Unset
+    "searchEditor.findMatchBorder": colors.unset, //* Unset
     "searchEditor.textInputBorder": colors.hidden,
 
     "editor.hoverHighlightBackground": colors.foreground + "66",
@@ -264,7 +269,7 @@ const editor = {
 
     "editor.rangeHighlightBackground": colors.foreground + "66",
     "editor.rangeHighlightBorder": colors.hidden,
-   /*  "editor.symbolHighlightBackground": colors.test, */ //* Unset
+    "editor.symbolHighlightBackground": colors.unset, //* Unset
     "editor.symbolHighlightBorder": colors.hidden,
     "editorWhitespace.foreground": colors.text + "22",
 
@@ -280,99 +285,98 @@ const editor = {
 
     "editorRuler.foreground": colors.backgroundLighter,
 
-    /* "editor.linkedEditingBackground": colors.test, */ //* Unset
+    "editor.linkedEditingBackground": colors.unset, //* Unset
 
     "editorCodeLens.foreground": colors.text + "77",
 
-    /* "editorLightBulb.foreground": colors.test, */ //* Unset
-    /* "editorLightBulbAutoFix.foreground": colors.test, */ //* Unset
+    "editorLightBulb.foreground": colors.unset, //* Unset
+    "editorLightBulbAutoFix.foreground": colors.unset, //* Unset
 
     "editorBracketMatch.background": colors.hidden,
     "editorBracketMatch.border": colors.text + "77",
 
-    /* "editorBracketHighlight.foreground1": colors.test, */ //* Unset
-    /* "editorBracketHighlight.foreground2": colors.test, */ //* Unset
-    /* "editorBracketHighlight.foreground3": colors.test, */ //* Unset
-    /* "editorBracketHighlight.foreground4": colors.test, */ //* Unset
-    /* "editorBracketHighlight.foreground5": colors.test, */ //* Unset
-    /* "editorBracketHighlight.foreground6": colors.test, */ //* Unset
-    /* "editorBracketHighlight.unexpectedBracket.foreground": colors.test, */ //* Unset
+    "editorBracketHighlight.foreground1": colors.unset, //* Unset
+    "editorBracketHighlight.foreground2": colors.unset, //* Unset
+    "editorBracketHighlight.foreground3": colors.unset, //* Unset
+    "editorBracketHighlight.foreground4": colors.unset, //* Unset
+    "editorBracketHighlight.foreground5": colors.unset, //* Unset
+    "editorBracketHighlight.foreground6": colors.unset, //* Unset
+    "editorBracketHighlight.unexpectedBracket.foreground": colors.unset, //* Unset
 
-    /* "editorBracketPairGuide.activeBackground1": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.activeBackground2": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.activeBackground3": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.activeBackground4": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.activeBackground5": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.activeBackground6": colors.test, */ //* Unset
+    "editorBracketPairGuide.activeBackground1": colors.unset, //* Unset
+    "editorBracketPairGuide.activeBackground2": colors.unset, //* Unset
+    "editorBracketPairGuide.activeBackground3": colors.unset, //* Unset
+    "editorBracketPairGuide.activeBackground4": colors.unset, //* Unset
+    "editorBracketPairGuide.activeBackground5": colors.unset, //* Unset
+    "editorBracketPairGuide.activeBackground6": colors.unset, //* Unset
 
-    /* "editorBracketPairGuide.background1": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.background2": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.background3": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.background4": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.background5": colors.test, */ //* Unset
-    /* "editorBracketPairGuide.background6": colors.test, */ //* Unset
+    "editorBracketPairGuide.background1": colors.unset, //* Unset
+    "editorBracketPairGuide.background2": colors.unset, //* Unset
+    "editorBracketPairGuide.background3": colors.unset, //* Unset
+    "editorBracketPairGuide.background4": colors.unset, //* Unset
+    "editorBracketPairGuide.background5": colors.unset, //* Unset
+    "editorBracketPairGuide.background6": colors.unset, //* Unset
 
     "editor.foldBackground": colors.foreground + "33",
 
     "editorOverviewRuler.background": colors.background,
     "editorOverviewRuler.border": colors.backgroundLighter,
-    /* "editorOverviewRuler.findMatchForeground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.rangeHighlightForeground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.selectionHighlightForeground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.wordHighlightForeground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.wordHighlightStrongForeground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.modifiedForeground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.addedForeground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.deletedForeground": colors.test, */ //* Unset
+    "editorOverviewRuler.findMatchForeground": colors.unset, //* Unset
+    "editorOverviewRuler.rangeHighlightForeground": colors.unset, //* Unset
+    "editorOverviewRuler.selectionHighlightForeground": colors.unset, //* Unset
+    "editorOverviewRuler.wordHighlightForeground": colors.unset, //* Unset
+    "editorOverviewRuler.wordHighlightStrongForeground": colors.unset, //* Unset
+    "editorOverviewRuler.modifiedForeground": colors.unset, //* Unset
+    "editorOverviewRuler.addedForeground": colors.unset, //* Unset
+    "editorOverviewRuler.deletedForeground": colors.unset, //* Unset
     "editorOverviewRuler.errorForeground": colors.error,
-    /* "editorOverviewRuler.warningForeground": colors.test, */ //* Unset
+    "editorOverviewRuler.warningForeground": colors.unset, //* Unset
     "editorOverviewRuler.infoForeground": colors.info,
-    /* "editorOverviewRuler.bracketMatchForeground": colors.test, */ //* Unset
+    "editorOverviewRuler.bracketMatchForeground": colors.unset, //* Unset
 
     "editorError.foreground": colors.error,
-    /* "editorError.border": colors.test, */ //* Unset
-    /* "editorError.background": colors.test, */ //* Unset
+    "editorError.border": colors.unset, //* Unset
+    "editorError.background": colors.unset, //* Unset
 
     "editorWarning.foreground": colors.warning,
-    /* "editorWarning.border": colors.test, */ //* Unset
-    /* "editorWarning.background": colors.test, */ //* Unset
+    "editorWarning.border": colors.unset, //* Unset
+    "editorWarning.background": colors.unset, //* Unset
     
     "editorInfo.foreground": colors.info,
-    /* "editorInfo.border": colors.test, */ //* Unset
-    /* "editorInfo.background": colors.test, */ //* Unset
+    "editorInfo.border": colors.unset, //* Unset
+    "editorInfo.background": colors.unset, //* Unset
 
-    /* "editorHint.foreground": colors.test, */ //* Unset
-    /* "editorHint.border": colors.test, */ //* Unset
+    "editorHint.foreground": colors.unset, //* Unset
+    "editorHint.border": colors.unset, //* Unset
 
     "problemsErrorIcon.foreground": colors.error,
     "problemsWarningIcon.foreground": colors.warning,
     "problemsInfoIcon.foreground": colors.info,
 
-    /* "editorUnnecessaryCode.border": colors.text, */ //* Unset
-    /* "editorUnnecessaryCode.opacity": colors.white + "FF", */ //* Unset
+    "editorUnnecessaryCode.border": colors.text, //* Unset
+    "editorUnnecessaryCode.opacity": colors.white + "FF", //* Unset
 
     "editorGutter.background": colors.background,
-    /* "editorGutter.modifiedBackground": colors.test, */ //* Unset
-    /* "editorGutter.addedBackground": colors.test, */ //* Unset
-    /* "editorGutter.deletedBackground": colors.test, */ //* Unset
-    /* "editorGutter.commentRangeForeground": colors.test, */ //* Unset
+    "editorGutter.modifiedBackground": colors.unset, //* Unset
+    "editorGutter.addedBackground": colors.unset, //* Unset
+    "editorGutter.deletedBackground": colors.unset, //* Unset
+    "editorGutter.commentRangeForeground": colors.unset, //* Unset
     "editorGutter.foldingControlForeground": colors.text,
 
-    /* "editorCommentsWidget.resolvedBorder": colors.test, */ //* Unset
-    /* "editorCommentsWidget.unresolvedBorder": colors.test, */ //* Unset
-    /* "editorCommentsWidget.rangeBackground": colors.test, */ //* Unset
-    /* "editorCommentsWidget.rangeBackground": colors.test, */ //* Unset
-    /* "editorCommentsWidget.rangeBorder": colors.test, */ //* Unset
-    /* "editorCommentsWidget.rangeActiveBackground": colors.test, */ //* Unset
-    /* "editorCommentsWidget.rangeActiveBorder": colors.test, */ //* Unset
+    "editorCommentsWidget.resolvedBorder": colors.unset, //* Unset
+    "editorCommentsWidget.unresolvedBorder": colors.unset, //* Unset
+    "editorCommentsWidget.rangeBackground": colors.unset, //* Unset
+    "editorCommentsWidget.rangeBorder": colors.unset, //* Unset
+    "editorCommentsWidget.rangeActiveBackground": colors.unset, //* Unset
+    "editorCommentsWidget.rangeActiveBorder": colors.unset, //* Unset
 
 };
 
-const diffEditor = {
+const diffEditor : Editor.DiffEditor = {
     "diffEditor.insertedTextBackground": colors.addedDiff + "33",
-    /* "diffEditor.insertedTextBorder": colors.hidden, */ //* Unset
+    "diffEditor.insertedTextBorder": colors.hidden, //* Unset
     "diffEditor.removedTextBackground": colors.removedDiff + "33",
-    /* "diffEditor.removedTextBorder": colors.hidden, */ //* Unset
+    "diffEditor.removedTextBorder": colors.hidden, //* Unset
     "diffEditor.border": colors.backgroundLighter,
     "diffEditor.diagonalFill": colors.backgroundLighter,
     "diffEditor.insertedLineBackground": colors.addedDiff + "22",
@@ -383,7 +387,7 @@ const diffEditor = {
     "diffEditorOverview.removedForeground": colors.removedDiff + "77",
 }
 
-const widgets = {
+const widgets : Editor.Widgets = {
     "editorWidget.foreground": colors.text,
     "editorWidget.background": colors.backgroundDark,
     "editorWidget.border": colors.backgroundLighter,
@@ -396,7 +400,7 @@ const widgets = {
     "editorSuggestWidget.selectedBackground": colors.foreground + "77",
     "editorSuggestWidget.selectedForeground": colors.text,
     "editorSuggestWidget.selectedIconForeground": colors.text,
-    /* "editorSuggestWidgetStatus.foreground": colors.test, */ //? Unknown
+    "editorSuggestWidgetStatus.foreground": colors.unset, //? Unknown
     "editorHoverWidget.foreground": colors.text,
     "editorHoverWidget.background": colors.background,
     "editorHoverWidget.border": colors.backgroundLighter,
@@ -422,16 +426,16 @@ const widgets = {
 
 }
 
-const peekView = {
+const peekView : Editor.PeekView = {
     "peekView.border": colors.info,
     "peekViewEditor.background": colors.infoBackground,
     "peekViewEditorGutter.background": colors.infoBackground,
-    /* "peekViewEditor.matchHighlightBackground": colors.test, */ //* Unset
+    "peekViewEditor.matchHighlightBackground": colors.unset, //* Unset
     "peekViewEditor.matchHighlightBorder": colors.hidden,
     "peekViewResult.background": colors.backgroundLight,
     "peekViewResult.fileForeground": colors.text,
     "peekViewResult.lineForeground": colors.text + "BB",
-    /* "peekViewResult.matchHighlightBackground": colors.test, */ //* Unset
+    "peekViewResult.matchHighlightBackground": colors.unset, //* Unset
     "peekViewResult.selectionBackground": colors.foreground + "99",
     "peekViewResult.selectionForeground": colors.text,
     "peekViewTitle.background": colors.background,
@@ -439,44 +443,44 @@ const peekView = {
     "peekViewTitleLabel.foreground": colors.text,
 }
 
-const mergeConflict = {
-    /* "merge.currentHeaderBackground": colors.test, */ //* Unset
-    /* "merge.currentContentBackground": colors.test, */ //* Unset
-    /* "merge.incomingHeaderBackground": colors.test, */ //* Unset
-    /* "merge.incomingContentBackground": colors.test, */ //* Unset
-    /* "merge.border": colors.test, */ //* Unset
-    /* "merge.commonContentBackground": colors.test, */ //* Unset
-    /* "merge.commonHeaderBackground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.currentContentForeground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.incomingContentForeground": colors.test, */ //* Unset
-    /* "editorOverviewRuler.commonContentForeground": colors.test, */ //* Unset
-    /* "mergeEditor.change.background": colors.test, */ //* Unset
-    /* "mergeEditor.change.word.background": colors.test, */ //* Unset
-    /* "mergeEditor.conflict.unhandledUnfocused.border": colors.test, */ //* Unset
-    /* "mergeEditor.conflict.unhandledFocused.border": colors.test, */ //* Unset
-    /* "mergeEditor.conflict.handledUnfocused.border": colors.test, */ //* Unset
-    /* "mergeEditor.conflict.handledFocused.border": colors.test, */ //* Unset
-    /* "mergeEditor.conflict.handled.minimapOverViewRuler": colors.test, */ //* Unset
-    /* "mergeEditor.conflict.unhandled.minimapOverViewRuler": colors.test, */ //* Unset
-    /* "mergeEditor.conflictingLines.background": colors.test, */ //* Unset
+const mergeConflict : Editor.MergeConflict = {
+    "merge.currentHeaderBackground": colors.unset, //* Unset
+    "merge.currentContentBackground": colors.unset, //* Unset
+    "merge.incomingHeaderBackground": colors.unset, //* Unset
+    "merge.incomingContentBackground": colors.unset, //* Unset
+    "merge.border": colors.unset, //* Unset
+    "merge.commonContentBackground": colors.unset, //* Unset
+    "merge.commonHeaderBackground": colors.unset, //* Unset
+    "editorOverviewRuler.currentContentForeground": colors.unset, //* Unset
+    "editorOverviewRuler.incomingContentForeground": colors.unset, //* Unset
+    "editorOverviewRuler.commonContentForeground": colors.unset, //* Unset
+    "mergeEditor.change.background": colors.unset, //* Unset
+    "mergeEditor.change.word.background": colors.unset, //* Unset
+    "mergeEditor.conflict.unhandledUnfocused.border": colors.unset, //* Unset
+    "mergeEditor.conflict.unhandledFocused.border": colors.unset, //* Unset
+    "mergeEditor.conflict.handledUnfocused.border": colors.unset, //* Unset
+    "mergeEditor.conflict.handledFocused.border": colors.unset, //* Unset
+    "mergeEditor.conflict.handled.minimapOverViewRuler": colors.unset, //* Unset
+    "mergeEditor.conflict.unhandled.minimapOverViewRuler": colors.unset, //* Unset
+    "mergeEditor.conflictingLines.background": colors.unset, //* Unset
 }
 
-const panel = {
+const panel : Editor.Panel = {
     "panel.background": colors.backgroundDark,
     "panel.border": colors.hidden,
     "panel.dropBorder": colors.foreground,
     "panelTitle.activeBorder": colors.foreground,
     "panelTitle.activeForeground": colors.text,
     "panelTitle.inactiveForeground": colors.text + "77",
-    /* "panelInput.border": colors.test, */ //? Unknown
+    "panelInput.border": colors.unset, //? Unknown
     "panelSection.border": colors.backgroundLighter,
-    /* "panelSection.dropBackground": colors.test, */ //* Unset
+    "panelSection.dropBackground": colors.unset, //* Unset
     "panelSectionHeader.background": colors.backgroundLight,
     "panelSectionHeader.foreground": colors.text,
-    /* "panelSectionHeader.border": colors.test, */ //? Unknown
+    "panelSectionHeader.border": colors.unset, //? Unknown
 };
 
-const statusBar = {
+const statusBar : Editor.StatusBar = {
     "statusBar.background": colors.backgroundDark,
     "statusBar.foreground": colors.text,
     "statusBar.border": colors.background,
@@ -488,31 +492,29 @@ const statusBar = {
     "statusBar.noFolderBorder": colors.hidden,
     "statusBarItem.activeBackground": colors.white + "44",
     "statusBarItem.hoverBackground": colors.white + "22",
-    /* "statusBarItem.prominentForeground": colors.test, */ //? Unknown
-    /* "statusBarItem.prominentBackground": colors.test, */ //? Unknown
-    /* "statusBarItem.prominentHoverBackground": colors.test, */ //? Unknown
+    "statusBarItem.prominentForeground": colors.unset, //? Unknown
+    "statusBarItem.prominentBackground": colors.unset, //? Unknown
+    "statusBarItem.prominentHoverBackground": colors.unset, //? Unknown
     "statusBarItem.remoteBackground": colors.foreground,
     "statusBarItem.remoteForeground": colors.text,
-    /* "statusBarItem.errorBackground": colors.test, */ //* Unset
+    "statusBarItem.errorBackground": colors.unset, //* Unset
     "statusBarItem.errorForeground": colors.text,
-    /* "statusBarItem.warningBackground": colors.test, */ //* Unset
+    "statusBarItem.warningBackground": colors.unset, //* Unset
     "statusBarItem.warningForeground": colors.text,
-    /* "statusBarItem.compactHoverBackground": colors.test, */ //* Unset
+    "statusBarItem.compactHoverBackground": colors.unset, //* Unset
     "statusBarItem.focusBorder": colors.text,
-    "statusBarItem.settingsProfilesBackground": colors.hidden,
-    "statusBarItem.settingsProfilesForeground": colors.text,
     "statusBar.focusBorder": colors.hidden
 };
 
-const titleBar = {
+const titleBar : Editor.TitleBar = {
     "titleBar.activeBackground": colors.backgroundDark,
     "titleBar.activeForeground": colors.text,
     "titleBar.inactiveBackground": colors.backgroundLight,
     "titleBar.inactiveForeground": colors.text + "77",
-    /* "titleBar.border": colors.test, */ //* Unset
+    "titleBar.border": colors.unset, //* Unset
 };
 
-const menuBar = {
+const menuBar : Editor.MenuBar = {
     "menubar.selectionForeground": colors.text,
     "menubar.selectionBackground": colors.backgroundLighter,
     "menubar.selectionBorder": colors.hidden,
@@ -527,15 +529,15 @@ const menuBar = {
     "menu.border": colors.background,
 };
 
-const commandCenter = {
+const commandCenter : Editor.CommandCenter = {
     "commandCenter.foreground": colors.text,
     "commandCenter.activeForeground": colors.text,
     "commandCenter.activeBackground": colors.backgroundLighter,
-    /* "commandCenter.background": colors.test, */ //* Unset
+    "commandCenter.background": colors.unset, //* Unset
     "commandCenter.border": colors.backgroundLighter
 }
 
-const notifications = {
+const notifications : Editor.Notifications = {
 
     "notificationCenter.border": colors.backgroundLighter,
     "notificationCenterHeader.foreground": colors.text,
@@ -545,7 +547,7 @@ const notifications = {
     "notifications.foreground": colors.text,
     "notifications.background": colors.backgroundDark,
     "notifications.border": colors.backgroundLighter,
-    /* "notificationLink.foreground": colors.test, */ //? Unknown
+    "notificationLink.foreground": colors.unset, //? Unknown
     "notificationsErrorIcon.foreground": colors.error,
     "notificationsWarningIcon.foreground": colors.warning,
     "notificationsInfoIcon.foreground": colors.info,
@@ -558,19 +560,19 @@ const banner = {
     "banner.iconForeground": colors.info,
 }
 
-const extensions = {
+const extensions : Editor.Extensions= {
     "extensionButton.prominentForeground": colors.text,
     "extensionButton.prominentBackground": colors.foreground,
     "extensionButton.prominentHoverBackground": colors.foregroundLight,
     "extensionBadge.remoteBackground": colors.foreground,
     "extensionBadge.remoteForeground": colors.text,
-    /* "extensionIcon.starForeground": colors.test, */ //* Unset
-    /* "extensionIcon.verifiedForeground": colors.test, */ //* Unset
-    /* "extensionIcon.preReleaseForeground": colors.test, */ //* Unset
-    /* "extensionIcon.sponsorForeground": colors.test, */ //* Unset
+    "extensionIcon.starForeground": colors.unset, //* Unset
+    "extensionIcon.verifiedForeground": colors.unset, //* Unset
+    "extensionIcon.preReleaseForeground": colors.unset, //* Unset
+    "extensionIcon.sponsorForeground": colors.unset, //* Unset
 }
 
-const quickPicker = {
+const quickPicker : Editor.QuickPicker = {
     "pickerGroup.border": colors.backgroundLighter,
     "pickerGroup.foreground": colors.foreground,
     "quickInput.background": colors.backgroundDark,
@@ -581,7 +583,7 @@ const quickPicker = {
     "quickInputTitle.background": colors.backgroundLighter,
 }
 
-const keybind = {
+const keybind : Editor.Keybind = {
     "keybindingLabel.background": colors.backgroundLight,
     "keybindingLabel.foreground": colors.text,
     "keybindingLabel.border": colors.backgroundLighter,
@@ -590,65 +592,65 @@ const keybind = {
     "keybindingTable.rowsBackground": colors.backgroundLighter,
 }
 
-const terminal = {
+const terminal : Editor.Terminal = {
     "terminal.background": colors.background,
     "terminal.border": colors.backgroundLighter,
     "terminal.foreground": colors.text,
-    /* "terminal.ansiBlack": colors.test, */ //* Unset
-    /* "terminal.ansiBlue": colors.test, */ //* Unset
-    /* "terminal.ansiBrightBlack": colors.test, */ //* Unset
-    /* "terminal.ansiBrightBlue": colors.test, */ //* Unset
-    /* "terminal.ansiBrightCyan": colors.test, */ //* Unset
-    /* "terminal.ansiBrightGreen": colors.test, */ //* Unset
-    /* "terminal.ansiBrightMagenta": colors.test, */ //* Unset
-    /* "terminal.ansiBrightRed": colors.test, */ //* Unset
-    /* "terminal.ansiBrightWhite": colors.test, */ //* Unset
-    /* "terminal.ansiBrightYellow": colors.test, */ //* Unset
-    /* "terminal.ansiCyan": colors.test, */ //* Unset
-    /* "terminal.ansiGreen": colors.test, */ //* Unset
-    /* "terminal.ansiMagenta": colors.test, */ //* Unset
-    /* "terminal.ansiRed": colors.test, */ //* Unset
-    /* "terminal.ansiWhite": colors.test, */ //* Unset
-    /* "terminal.ansiYellow": colors.test, */ //* Unset
+    "terminal.ansiBlack": colors.unset, //* Unset
+    "terminal.ansiBlue": colors.unset, //* Unset
+    "terminal.ansiBrightBlack": colors.unset, //* Unset
+    "terminal.ansiBrightBlue": colors.unset, //* Unset
+    "terminal.ansiBrightCyan": colors.unset, //* Unset
+    "terminal.ansiBrightGreen": colors.unset, //* Unset
+    "terminal.ansiBrightMagenta": colors.unset, //* Unset
+    "terminal.ansiBrightRed": colors.unset, //* Unset
+    "terminal.ansiBrightWhite": colors.unset, //* Unset
+    "terminal.ansiBrightYellow": colors.unset, //* Unset
+    "terminal.ansiCyan": colors.unset, //* Unset
+    "terminal.ansiGreen": colors.unset, //* Unset
+    "terminal.ansiMagenta": colors.unset, //* Unset
+    "terminal.ansiRed": colors.unset, //* Unset
+    "terminal.ansiWhite": colors.unset, //* Unset
+    "terminal.ansiYellow": colors.unset, //* Unset
     "terminal.selectionBackground": colors.foreground + "99",
-    /* "terminal.inactiveSelectionBackground": colors.test, */ //* Unset
-    /* "terminal.selectionForeground": colors.test, */ //* Unset
-    /* "terminal.findMatchBackground": colors.test, */ //* Unset
-    /* "terminal.findMatchBorder": colors.test, */ //* Unset
-    /* "terminal.findMatchHighlightBackground": colors.test, */ //* Unset
-    /* "terminal.findMatchHighlightBorder": colors.test, */ //* Unset
+    "terminal.inactiveSelectionBackground": colors.unset, //* Unset
+    "terminal.selectionForeground": colors.unset, //* Unset
+    "terminal.findMatchBackground": colors.unset, //* Unset
+    "terminal.findMatchBorder": colors.unset, //* Unset
+    "terminal.findMatchHighlightBackground": colors.unset, //* Unset
+    "terminal.findMatchHighlightBorder": colors.unset, //* Unset
     "terminalCursor.background": colors.black,
     "terminalCursor.foreground": colors.text,
-    /* "terminal.dropBackground": colors.test, */ //* Unset
+    "terminal.dropBackground": colors.unset, //* Unset
     "terminal.tab.activeBorder": colors.foreground,
     "terminalCommandDecoration.defaultBackground": colors.white + "44",
     "terminalCommandDecoration.successBackground": colors.info,
     "terminalCommandDecoration.errorBackground": colors.error,
     "terminalOverviewRuler.cursorForeground": colors.text,
-    /* "terminalOverviewRuler.findMatchForeground": colors.test, */ //* Unset
+    "terminalOverviewRuler.findMatchForeground": colors.unset, //* Unset
 }
 
-const debug = {
+const debug : Editor.Debug = {
     "debugToolBar.background": colors.backgroundDark,
-    /* "debugToolBar.border": colors.test, */ //* Unset
-    /* "editor.stackFrameHighlightBackground": colors.test, */ //* Unset
-    /* "editor.focusedStackFrameHighlightBackground": colors.test, */ //* Unset
-    /* "editor.inlineValuesForeground": colors.test, */ //* Unset
-    /* "editor.inlineValuesBackground": colors.test, */ //* Unset
+    "debugToolBar.border": colors.unset, //* Unset
+    "editor.stackFrameHighlightBackground": colors.unset, //* Unset
+    "editor.focusedStackFrameHighlightBackground": colors.unset, //* Unset
+    "editor.inlineValuesForeground": colors.unset, //* Unset
+    "editor.inlineValuesBackground": colors.unset, //* Unset
     "debugView.exceptionLabelForeground": colors.text,
-    /* "debugView.exceptionLabelBackground": colors.test, */ //* Unset
+    "debugView.exceptionLabelBackground": colors.unset, //* Unset
     "debugView.stateLabelForeground": colors.text,
-    /* "debugView.stateLabelBackground": colors.test, */ //* Unset
+    "debugView.stateLabelBackground": colors.unset, //* Unset
     "debugView.valueChangedHighlight": colors.info,
-    /* "debugTokenExpression.name": colors.test, */ //*Unset
+    "debugTokenExpression.name": colors.unset, //*Unset
     "debugTokenExpression.value": colors.text + "77",
-    /* "debugTokenExpression.string": colors.test, */ //* Unset
-    /* "debugTokenExpression.boolean": colors.test, */ //* Unset
-    /* "debugTokenExpression.number": colors.test, */ //* Unset
-    /* "debugTokenExpression.error": colors.test, */ //* Unset
+    "debugTokenExpression.string": colors.unset, //* Unset
+    "debugTokenExpression.boolean": colors.unset, //* Unset
+    "debugTokenExpression.number": colors.unset, //* Unset
+    "debugTokenExpression.error": colors.unset, //* Unset
 }
 
-const testing = {
+const testing : Editor.Testing = {
     "testing.iconFailed": colors.error,
     "testing.iconErrored": colors.error,
     "testing.iconPassed": colors.pass,
@@ -656,7 +658,7 @@ const testing = {
     "testing.iconQueued": colors.warning,
     "testing.iconUnset": colors.white + "44",
     "testing.iconSkipped": colors.white + "44",
-    /* "testing.peekBorder": colors.test, */ //* Unset
+    "testing.peekBorder": colors.unset, //* Unset
     "testing.peekHeaderBackground": colors.backgroundDark,
     "testing.message.error.decorationForeground": colors.error,
     "testing.message.error.lineBackground": colors.errorBackground,
@@ -664,39 +666,39 @@ const testing = {
     "testing.message.info.lineBackground": colors.infoBackground,
 }
 
-const welcomePage = {
+const welcomePage : Editor.WelcomePage = {
     "welcomePage.background": colors.background,
     "welcomePage.progress.background": colors.backgroundLighter,
     "welcomePage.progress.foreground": colors.foreground,
     "welcomePage.tileBackground": colors.backgroundDark,
     "welcomePage.tileHoverBackground": colors.backgroundLight,
     "welcomePage.tileShadow": colors.shadow,
-    /* "walkThrough.embeddedEditorBackground": colors.test, */ //? Unknown
+    "walkThrough.embeddedEditorBackground": colors.unset, //? Unknown
 }
 
-const sourceControl = {
-    /* "scm.providerBorder": colors.test, */ //? Unknown
+const sourceControl : Editor.SourceControl = {
+    "scm.providerBorder": colors.unset, //? Unknown
 }
 
-const git = {
-    /* "gitDecoration.addedResourceForeground": colors.test, */ //* Unset
-    /* "gitDecoration.modifiedResourceForeground": colors.test, */ //* Unset
-    /* "gitDecoration.deletedResourceForeground": colors.test, */ //* Unset
-    /* "gitDecoration.renamedResourceForeground": colors.test, */ //* Unset
-    /* "gitDecoration.stageModifiedResourceForeground": colors.test, */ //* Unset
-    /* "gitDecoration.stageDeletedResourceForeground": colors.test, */ //* Unset
-    /* "gitDecoration.untrackedResourceForeground": colors.test, */ //* Unset
-    /* "gitDecoration.ignoredResourceForeground": colors.test, */ //* Unset
-    /* "gitDecoration.conflictingResourceForeground": colors.test, */ //* Unset
-    /* "gitDecoration.submoduleResourceForeground": colors.test, */ //* Unset
+const git : Editor.Git = {
+    "gitDecoration.addedResourceForeground": colors.unset, //* Unset
+    "gitDecoration.modifiedResourceForeground": colors.unset, //* Unset
+    "gitDecoration.deletedResourceForeground": colors.unset, //* Unset
+    "gitDecoration.renamedResourceForeground": colors.unset, //* Unset
+    "gitDecoration.stageModifiedResourceForeground": colors.unset, //* Unset
+    "gitDecoration.stageDeletedResourceForeground": colors.unset, //* Unset
+    "gitDecoration.untrackedResourceForeground": colors.unset, //* Unset
+    "gitDecoration.ignoredResourceForeground": colors.unset, //* Unset
+    "gitDecoration.conflictingResourceForeground": colors.unset, //* Unset
+    "gitDecoration.submoduleResourceForeground": colors.unset, //* Unset
 }
 
-const settings = {
+const settings : Editor.Settings = {
     "settings.headerForeground": colors.text,
     "settings.modifiedItemIndicator": colors.info,
     "settings.dropdownBackground": colors.backgroundLighter,
     "settings.dropdownForeground": colors.text,
-    /* "settings.dropdownBorder": colors.test, */ //* Unset
+    "settings.dropdownBorder": colors.unset, //* Unset
     "settings.dropdownListBorder": colors.backgroundDark,
     "settings.checkboxBackground": colors.backgroundLighter,
     "settings.checkboxForeground": colors.text,
@@ -714,7 +716,7 @@ const settings = {
     "settings.sashBorder": colors.backgroundLighter,
 }
 
-const breadcrumbs = {
+const breadcrumbs : Editor.BreadCrumbs = {
     "breadcrumb.foreground": colors.text + "77",
     "breadcrumb.background": colors.background,
     "breadcrumb.focusForeground": colors.text,
@@ -722,85 +724,74 @@ const breadcrumbs = {
     "breadcrumbPicker.background": colors.backgroundDark,
 }
 
-const snippets = {
-    /* "editor.snippetTabstopHighlightBackground": colors.test, */ //? Unknown
-    /* "editor.snippetTabstopHighlightBorder": colors.test, */ //? Unknown
-    /* "editor.snippetFinalTabstopHighlightBackground": colors.test, */ //? Unknown
-    /* "editor.snippetFinalTabstopHighlightBorder": colors.test, */ //? Unknown
+const snippets : Editor.Snippets = {
+    "editor.snippetTabstopHighlightBackground": colors.unset, //? Unknown
+    "editor.snippetTabstopHighlightBorder": colors.unset, //? Unknown
+    "editor.snippetFinalTabstopHighlightBackground": colors.unset, //? Unknown
+    "editor.snippetFinalTabstopHighlightBorder": colors.unset, //? Unknown
 }
 
-const interactive = {
-    /* "interactive.activeCodeBorder": colors.test, */ //? Unknown
-    /* "interactive.inactiveCodeBorder": colors.test, */ //? Unknown
+const symbolIcons : Editor.SymbolIcons = {
+    "symbolIcon.arrayForeground": colors.unset, //* Unset
+    "symbolIcon.booleanForeground": colors.unset, //* Unset
+    "symbolIcon.classForeground": colors.unset, //* Unset
+    "symbolIcon.colorForeground": colors.unset, //* Unset
+    "symbolIcon.constantForeground": colors.unset, //* Unset
+    "symbolIcon.constructorForeground": colors.unset, //* Unset
+    "symbolIcon.enumeratorForeground": colors.unset, //* Unset
+    "symbolIcon.enumeratorMemberForeground": colors.unset, //* Unset
+    "symbolIcon.eventForeground": colors.unset, //* Unset
+    "symbolIcon.fieldForeground": colors.unset, //* Unset
+    "symbolIcon.fileForeground": colors.unset, //* Unset
+    "symbolIcon.folderForeground": colors.unset, //* Unset
+    "symbolIcon.functionForeground": colors.unset, //* Unset
+    "symbolIcon.interfaceForeground": colors.unset, //* Unset
+    "symbolIcon.keyForeground": colors.unset, //* Unset
+    "symbolIcon.keywordForeground": colors.unset, //* Unset
+    "symbolIcon.methodForeground": colors.unset, //* Unset
+    "symbolIcon.moduleForeground": colors.unset, //* Unset
+    "symbolIcon.namespaceForeground": colors.unset, //* Unset
+    "symbolIcon.nullForeground": colors.unset, //* Unset
+    "symbolIcon.numberForeground": colors.unset, //* Unset
+    "symbolIcon.objectForeground": colors.unset, //* Unset
+    "symbolIcon.operatorForeground": colors.unset, //* Unset
+    "symbolIcon.packageForeground": colors.unset, //* Unset
+    "symbolIcon.propertyForeground": colors.unset, //* Unset
+    "symbolIcon.referenceForeground": colors.unset, //* Unset
+    "symbolIcon.snippetForeground": colors.unset, //* Unset
+    "symbolIcon.stringForeground": colors.unset, //* Unset
+    "symbolIcon.structForeground": colors.unset, //* Unset
+    "symbolIcon.textForeground": colors.unset, //* Unset
+    "symbolIcon.typeParameterForeground": colors.unset, //* Unset
+    "symbolIcon.unitForeground": colors.unset, //* Unset
+    "symbolIcon.variableForeground": colors.unset, //* Unset
 }
 
-const issues = {
-    "issues.closed": colors.pass,
-    /* "issues.newIssueDecoration": colors.test, */ //? Unknown
-    "issues.open": colors.warning,
-}
-
-const symbolIcons = {
-    /* "symbolIcon.arrayForeground": colors.test, */ //* Unset
-    /* "symbolIcon.booleanForeground": colors.test, */ //* Unset
-    /* "symbolIcon.classForeground": colors.test, */ //* Unset
-    /* "symbolIcon.colorForeground": colors.test, */ //* Unset
-    /* "symbolIcon.constantForeground": colors.test, */ //* Unset
-    /* "symbolIcon.constructorForeground": colors.test, */ //* Unset
-    /* "symbolIcon.enumeratorForeground": colors.test, */ //* Unset
-    /* "symbolIcon.enumeratorMemberForeground": colors.test, */ //* Unset
-    /* "symbolIcon.eventForeground": colors.test, */ //* Unset
-    /* "symbolIcon.fieldForeground": colors.test, */ //* Unset
-    /* "symbolIcon.fileForeground": colors.test, */ //* Unset
-    /* "symbolIcon.folderForeground": colors.test, */ //* Unset
-    /* "symbolIcon.functionForeground": colors.test, */ //* Unset
-    /* "symbolIcon.interfaceForeground": colors.test, */ //* Unset
-    /* "symbolIcon.keyForeground": colors.test, */ //* Unset
-    /* "symbolIcon.keywordForeground": colors.test, */ //* Unset
-    /* "symbolIcon.methodForeground": colors.test, */ //* Unset
-    /* "symbolIcon.moduleForeground": colors.test, */ //* Unset
-    /* "symbolIcon.namespaceForeground": colors.test, */ //* Unset
-    /* "symbolIcon.nullForeground": colors.test, */ //* Unset
-    /* "symbolIcon.numberForeground": colors.test, */ //* Unset
-    /* "symbolIcon.objectForeground": colors.test, */ //* Unset
-    /* "symbolIcon.operatorForeground": colors.test, */ //* Unset
-    /* "symbolIcon.packageForeground": colors.test, */ //* Unset
-    /* "symbolIcon.propertyForeground": colors.test, */ //* Unset
-    /* "symbolIcon.referenceForeground": colors.test, */ //* Unset
-    /* "symbolIcon.snippetForeground": colors.test, */ //* Unset
-    /* "symbolIcon.stringForeground": colors.test, */ //* Unset
-    /* "symbolIcon.structForeground": colors.test, */ //* Unset
-    /* "symbolIcon.textForeground": colors.test, */ //* Unset
-    /* "symbolIcon.typeParameterForeground": colors.test, */ //* Unset
-    /* "symbolIcon.unitForeground": colors.test, */ //* Unset
-    /* "symbolIcon.variableForeground": colors.test, */ //* Unset
-}
-
-const debugIcons = {
-    /* "debugIcon.breakpointForeground": colors.test, */ //* Unset
-    /* "debugIcon.breakpointDisabledForeground": colors.test, */ //* Unset
-    /* "debugIcon.breakpointUnverifiedForeground": colors.test, */ //* Unset
-    /* "debugIcon.breakpointCurrentStackframeForeground": colors.test, */ //* Unset
-    /* "debugIcon.breakpointStackframeForeground": colors.test, */ //* Unset
-    /* "debugIcon.startForeground": colors.test, */ //* Unset
-    /* "debugIcon.pauseForeground": colors.test, */ //* Unset
-    /* "debugIcon.stopForeground": colors.test, */ //* Unset
-    /* "debugIcon.disconnectForeground": colors.test, */ //* Unset
-    /* "debugIcon.restartForeground": colors.test, */ //* Unset
-    /* "debugIcon.stepOverForeground": colors.test, */ //* Unset
-    /* "debugIcon.stepIntoForeground": colors.test, */ //* Unset
-    /* "debugIcon.stepOutForeground": colors.test, */ //* Unset
-    /* "debugIcon.continueForeground": colors.test, */ //* Unset
-    /* "debugIcon.stepBackForeground": colors.test, */ //* Unset
-    /* "debugConsole.infoForeground": colors.test, */ //* Unset
-    /* "debugConsole.warningForeground": colors.test, */ //* Unset
-    /* "debugConsole.errorForeground": colors.test, */ //* Unset
-    /* "debugConsole.sourceForeground": colors.test, */ //* Unset
-    /* "debugConsoleInputIcon.foreground": colors.test, */ //* Unset
+const debugIcons : Editor.DebugIcons = {
+    "debugIcon.breakpointForeground": colors.unset, //* Unset
+    "debugIcon.breakpointDisabledForeground": colors.unset, //* Unset
+    "debugIcon.breakpointUnverifiedForeground": colors.unset, //* Unset
+    "debugIcon.breakpointCurrentStackframeForeground": colors.unset, //* Unset
+    "debugIcon.breakpointStackframeForeground": colors.unset, //* Unset
+    "debugIcon.startForeground": colors.unset, //* Unset
+    "debugIcon.pauseForeground": colors.unset, //* Unset
+    "debugIcon.stopForeground": colors.unset, //* Unset
+    "debugIcon.disconnectForeground": colors.unset, //* Unset
+    "debugIcon.restartForeground": colors.unset, //* Unset
+    "debugIcon.stepOverForeground": colors.unset, //* Unset
+    "debugIcon.stepIntoForeground": colors.unset, //* Unset
+    "debugIcon.stepOutForeground": colors.unset, //* Unset
+    "debugIcon.continueForeground": colors.unset, //* Unset
+    "debugIcon.stepBackForeground": colors.unset, //* Unset
+    "debugConsole.infoForeground": colors.unset, //* Unset
+    "debugConsole.warningForeground": colors.unset, //* Unset
+    "debugConsole.errorForeground": colors.unset, //* Unset
+    "debugConsole.sourceForeground": colors.unset, //* Unset
+    "debugConsoleInputIcon.foreground": colors.unset, //* Unset
 
 }
 
-const notebook = {
+const notebook : Editor.Notebook = {
     "notebook.editorBackground": colors.background,
     "notebook.cellBorderColor": colors.backgroundLighter,
     "notebook.cellHoverBackground": colors.backgroundDark,
@@ -812,12 +803,12 @@ const notebook = {
     "notebook.focusedCellBorder": colors.foreground,
     "notebook.focusedEditorBorder": colors.foreground,
     "notebook.inactiveFocusedCellBorder": colors.foreground + "77",
-    /* "notebook.inactiveSelectedCellBorder": colors.test, */ //? Unknown
+    "notebook.inactiveSelectedCellBorder": colors.unset, //? Unknown
     "notebook.outputContainerBackgroundColor": colors.background,
     "notebook.outputContainerBorderColor": colors.hidden,
-    /* "notebook.selectedCellBackground": colors.test, */ //? Unknown
-    /* "notebook.selectedCellBorder": colors.test, */ //? Unknown 
-    /* "notebook.symbolHighlightBackground": colors.test, */ //? Unknown
+    "notebook.selectedCellBackground": colors.unset, //? Unknown
+    "notebook.selectedCellBorder": colors.unset, //? Unknown 
+    "notebook.symbolHighlightBackground": colors.unset, //? Unknown
     "notebookScrollbarSlider.background": colors.foreground + "77",
     "notebookScrollbarSlider.activeBackground": colors.foreground + "BB",
     "notebookScrollbarSlider.hoverBackground": colors.foreground + "99",
@@ -826,22 +817,22 @@ const notebook = {
     "notebookStatusSuccessIcon.foreground": colors.pass,
 }
 
-const chart = {
-    /* "charts.foreground": colors.test, */ //? Unknown
-    /* "charts.lines": colors.test, */ //? Unknown
-    /* "charts.red": colors.test, */ //? Unknown
-    /* "charts.green": colors.test, */ //? Unknown
-    /* "charts.blue": colors.test, */ //? Unknown
-    /* "charts.yellow": colors.test, */ //? Unknown
-    /* "charts.orange": colors.test, */ //? Unknown
-    /* "charts.purple": colors.test, */ //? Unknown
+const chart : Editor.Chart = {
+    "charts.foreground": colors.unset, //? Unknown
+    "charts.lines": colors.unset, //? Unknown
+    "charts.red": colors.unset, //? Unknown
+    "charts.green": colors.unset, //? Unknown
+    "charts.blue": colors.unset, //? Unknown
+    "charts.yellow": colors.unset, //? Unknown
+    "charts.orange": colors.unset, //? Unknown
+    "charts.purple": colors.unset, //? Unknown
 }
 
-const ports = {
-    /* "ports.iconRunningProcessForeground": colors.test, */ //* Unset
+const ports : Editor.Port = {
+    "ports.iconRunningProcessForeground": colors.unset, //* Unset
 }
 
-module.exports = {
+export const color = {
     ...contrast,
     ...base,
     ...window,
@@ -883,11 +874,9 @@ module.exports = {
     ...settings,
     ...breadcrumbs,
     ...snippets,
-    ...interactive,
-    ...issues,
     ...symbolIcons,
     ...debugIcons,
     ...notebook,
     ...chart,
     ...ports
-};
+}

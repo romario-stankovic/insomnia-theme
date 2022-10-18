@@ -1,4 +1,5 @@
-const colors = {
+export const colors = {
+    unset: undefined,
     test: "#ff0000",
     black: "#000000",
     white: "#ffffff",
@@ -10,7 +11,7 @@ const colors = {
     background: "#181b1e",
     backgroundLight: "#1c1f22",
     backgroundLighter: "#262b31",
-    
+
     foreground: "#2466a9",
     foregroundLight: "#2975c2",
     foregroundLighter: "#318ce8",
@@ -30,5 +31,3 @@ const colors = {
     info: "#3794ff",
     pass: "#4ab386",
 }
-
-module.exports = colors;

@@ -1,5 +1,5 @@
-const fs = require("fs");
-const darkTheme = require("./dark");
+import * as fs from 'fs';
+import * as darkTheme from './themes/dark';
 
 const themes = [darkTheme];
 
