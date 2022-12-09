@@ -56,7 +56,9 @@ const button : Editor.Buttons = {
 const checkbox : Editor.CheckBox = {
     "checkbox.background": colors.backgroundLighter,
     "checkbox.foreground": colors.text,
-    "checkbox.border": colors.hidden
+    "checkbox.border": colors.hidden,
+    "checkbox.selectBackground": colors.unset, //* Unset
+    "checkbox.selectBorder": colors.unset, //* Unset
 };
 
 const dropdown : Editor.Dropdown = {
@@ -153,9 +155,9 @@ const activityBar : Editor.ActivityBar = {
     "activityBar.activeBorder": colors.foreground,
     "activityBar.activeBackground": colors.backgroundLight,
     "activityBar.activeFocusBorder": colors.foreground,
-    "activityBarItem.settingsProfilesForeground": colors.text + "99",
-    "activityBarItem.settingsProfilesHoverForeground": colors.foregroundLighter,
-    "activityBarItem.settingsProfilesBackground": colors.backgroundLight
+    "activityBarItem.profilesForeground": colors.text + "99",
+    "activityBarItem.profilesHoverForeground": colors.foregroundLighter,
+    "activityBarItem.profilesBackground": colors.backgroundLight
 };
 
 const sideBar : Editor.SideBar = {
@@ -463,6 +465,10 @@ const mergeConflict : Editor.MergeConflict = {
     "mergeEditor.conflict.handled.minimapOverViewRuler": colors.unset, //* Unset
     "mergeEditor.conflict.unhandled.minimapOverViewRuler": colors.unset, //* Unset
     "mergeEditor.conflictingLines.background": colors.unset, //* Unset
+    "mergeEditor.changeBase.background": colors.unset, //* Unset
+    "mergeEditor.changeBase.word.background": colors.unset, //* Unset
+    "mergeEditor.conflict.input1.background": colors.unset, //* Unset
+    "mergeEditor.conflict.input2.background": colors.unset, //* Unset
 }
 
 const panel : Editor.Panel = {
@@ -490,6 +496,9 @@ const statusBar : Editor.StatusBar = {
     "statusBar.noFolderForeground": colors.text,
     "statusBar.noFolderBackground": colors.backgroundDark,
     "statusBar.noFolderBorder": colors.hidden,
+    "statusBar.offlineBackground": colors.unset, //* Unset
+    "statusBar.offlineBorder": colors.unset, //* Unset
+    "statusBar.offlineForeground": colors.unset, //* Unset
     "statusBarItem.activeBackground": colors.white + "44",
     "statusBarItem.hoverBackground": colors.white + "22",
     "statusBarItem.prominentForeground": colors.unset, //? Unknown
@@ -534,7 +543,10 @@ const commandCenter : Editor.CommandCenter = {
     "commandCenter.activeForeground": colors.text,
     "commandCenter.activeBackground": colors.backgroundLighter,
     "commandCenter.background": colors.unset, //* Unset
-    "commandCenter.border": colors.backgroundLighter
+    "commandCenter.border": colors.backgroundLighter,
+    "commandCenter.activeBorder": colors.backgroundLighter,
+    "commandCenter.inactiveBorder": colors.backgroundLight,
+    "commandCenter.inactiveForeground": colors.unset,
 }
 
 const notifications : Editor.Notifications = {
@@ -564,6 +576,10 @@ const extensions : Editor.Extensions= {
     "extensionButton.prominentForeground": colors.text,
     "extensionButton.prominentBackground": colors.foreground,
     "extensionButton.prominentHoverBackground": colors.foregroundLight,
+    "extensionButton.background": colors.foreground,
+    "extensionButton.hoverBackground": colors.foregroundLight,
+    "extensionButton.foreground": colors.text,
+    "extensionButton.separator": colors.text,
     "extensionBadge.remoteBackground": colors.foreground,
     "extensionBadge.remoteForeground": colors.text,
     "extensionIcon.starForeground": colors.unset, //* Unset
@@ -672,8 +688,9 @@ const welcomePage : Editor.WelcomePage = {
     "welcomePage.progress.foreground": colors.foreground,
     "welcomePage.tileBackground": colors.backgroundDark,
     "welcomePage.tileHoverBackground": colors.backgroundLight,
-    "welcomePage.tileShadow": colors.shadow,
+    "welcomePage.tileBorder": colors.foreground,
     "walkThrough.embeddedEditorBackground": colors.unset, //? Unknown
+    "walkthrough.stepTitle.foreground": colors.text,
 }
 
 const sourceControl : Editor.SourceControl = {

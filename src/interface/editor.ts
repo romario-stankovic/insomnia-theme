@@ -54,6 +54,8 @@ export namespace Editor {
         "checkbox.background": color;
         "checkbox.border": color;
         "checkbox.foreground": color;
+        "checkbox.selectBackground": color;
+        "checkbox.selectBorder": color;
     }
 
     export interface Dropdown {
@@ -149,9 +151,9 @@ export namespace Editor {
         "activityBar.activeBorder": color;
         "activityBar.activeBackground": color;
         "activityBar.activeFocusBorder": color;
-        "activityBarItem.settingsProfilesForeground": color;
-        "activityBarItem.settingsProfilesHoverForeground": color;
-        "activityBarItem.settingsProfilesBackground": color;
+        "activityBarItem.profilesForeground": color;
+        "activityBarItem.profilesHoverForeground": color;
+        "activityBarItem.profilesBackground": color;
     }
 
     export interface SideBar {
@@ -457,6 +459,10 @@ export namespace Editor {
         "mergeEditor.conflict.handled.minimapOverViewRuler": color;
         "mergeEditor.conflict.unhandled.minimapOverViewRuler": color;
         "mergeEditor.conflictingLines.background": color;
+        "mergeEditor.changeBase.background": color,
+        "mergeEditor.changeBase.word.background": color,
+        "mergeEditor.conflict.input1.background": color,
+        "mergeEditor.conflict.input2.background": color,
     }
 
     export interface Panel {
@@ -484,6 +490,9 @@ export namespace Editor {
         "statusBar.noFolderForeground": color;
         "statusBar.noFolderBackground": color;
         "statusBar.noFolderBorder": color;
+        "statusBar.offlineBackground": color,
+        "statusBar.offlineBorder": color,
+        "statusBar.offlineForeground": color,
         "statusBarItem.activeBackground": color;
         "statusBarItem.hoverBackground": color;
         "statusBarItem.prominentForeground": color;
@@ -527,6 +536,9 @@ export namespace Editor {
         "commandCenter.foreground": color;
         "commandCenter.activeForeground": color;
         "commandCenter.activeBackground": color;
+        "commandCenter.activeBorder": color;
+        "commandCenter.inactiveBorder": color;
+        "commandCenter.inactiveForeground": color;
         "commandCenter.background": color;
         "commandCenter.border": color;
     }
@@ -556,6 +568,10 @@ export namespace Editor {
         "extensionButton.prominentForeground": color;
         "extensionButton.prominentBackground": color;
         "extensionButton.prominentHoverBackground": color;
+        "extensionButton.background": color;
+        "extensionButton.foreground": color;
+        "extensionButton.hoverBackground": color;
+        "extensionButton.separator": color;
         "extensionBadge.remoteBackground": color;
         "extensionBadge.remoteForeground": color;
         "extensionIcon.starForeground": color;
@@ -665,8 +681,9 @@ export namespace Editor {
         "welcomePage.progress.foreground": color;
         "welcomePage.tileBackground": color;
         "welcomePage.tileHoverBackground": color;
-        "welcomePage.tileShadow": color;
+        "welcomePage.tileBorder": color;
         "walkThrough.embeddedEditorBackground": color;
+        "walkthrough.stepTitle.foreground": color;
     }
 
     export interface SourceControl {
