@@ -375,16 +375,16 @@ const editor : Editor.Editor = {
 };
 
 const diffEditor : Editor.DiffEditor = {
-    "diffEditor.insertedTextBackground": colors.addedDiff + "33",
+    "diffEditor.insertedTextBackground": colors.addedDiff + "11",
     "diffEditor.insertedTextBorder": colors.hidden, //* Unset
-    "diffEditor.removedTextBackground": colors.removedDiff + "33",
+    "diffEditor.removedTextBackground": colors.removedDiff + "11",
     "diffEditor.removedTextBorder": colors.hidden, //* Unset
     "diffEditor.border": colors.backgroundLighter,
     "diffEditor.diagonalFill": colors.backgroundLighter,
-    "diffEditor.insertedLineBackground": colors.addedDiff + "22",
-    "diffEditor.removedLineBackground": colors.removedDiff + "22",
-    "diffEditorGutter.insertedLineBackground": colors.addedDiff + "22",
-    "diffEditorGutter.removedLineBackground": colors.removedDiff + "22",
+    "diffEditor.insertedLineBackground": colors.addedDiff + "11",
+    "diffEditor.removedLineBackground": colors.removedDiff + "11",
+    "diffEditorGutter.insertedLineBackground": colors.addedDiff + "33",
+    "diffEditorGutter.removedLineBackground": colors.removedDiff + "33",
     "diffEditorOverview.insertedForeground": colors.addedDiff + "77",
     "diffEditorOverview.removedForeground": colors.removedDiff + "77",
 }

@@ -2,6 +2,10 @@
 
 Changes to the "Insomnia Theme" Theme are noted here
 
+## [1.0.4] - 2023-01-29
+
+- Made the diff editor highlight colors darker
+
 ## [1.0.3] - 2022-12-09
 
 - Changes to the internal project structure

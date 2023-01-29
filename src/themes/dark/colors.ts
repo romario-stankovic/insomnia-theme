@@ -20,7 +20,7 @@ export const colors = {
     /* Source Control */
     removedDiff: "#ff0000",
     addedDiff: "#00ff00",
-    
+
     /* Base */
     shadow: "#00000033",
     error: "#f14c4c",
