@@ -17,7 +17,7 @@ The focus for this theme was to change the background and foreground colors of t
 
 ### 🛠 Requirements:
 
-- Visual Studio Code `^1.70.0`
+- Visual Studio Code `^1.76.0`
 
 ### 📖 Guide:
 

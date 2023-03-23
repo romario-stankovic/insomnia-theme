@@ -18,6 +18,7 @@ const base : Editor.Base = {
     "errorForeground": colors.error,
     "icon.foreground": colors.text,
     "widget.shadow": colors.shadow,
+    "widget.border": colors.unset,
     "sash.hoverBorder": colors.foreground,
 };
 
@@ -138,7 +139,8 @@ const list : Editor.List = {
     "list.filterMatchBackground": colors.unset, //* Unset
     "list.filterMatchBorder": colors.hidden,
     "list.deemphasizedForeground": colors.unset, //? Unknown
-    "tree.indentGuidesStroke": colors.text + "33",
+    "tree.indentGuidesStroke": colors.text + "44",
+    "tree.inactiveIndentGuidesStroke": colors.text + "11",
     "tree.tableColumnsBorder": colors.unset, //? Unknown
     "tree.tableOddRowsBackground": colors.unset, //? Unknown
 
@@ -146,8 +148,8 @@ const list : Editor.List = {
 
 const activityBar : Editor.ActivityBar = {
     "activityBar.background": colors.backgroundDark,
-    "activityBar.dropBorder": colors.foreground,
-    "activityBar.foreground": colors.foregroundLight,
+    "activityBar.dropBorder": colors.foreground + "66", //* Unset
+    "activityBar.foreground": colors.text,
     "activityBar.inactiveForeground": colors.text + "99",
     "activityBar.border": colors.hidden,
     "activityBarBadge.background": colors.foreground,
@@ -155,10 +157,12 @@ const activityBar : Editor.ActivityBar = {
     "activityBar.activeBorder": colors.foreground,
     "activityBar.activeBackground": colors.backgroundLight,
     "activityBar.activeFocusBorder": colors.foreground,
-    "activityBarItem.profilesForeground": colors.text + "99",
-    "activityBarItem.profilesHoverForeground": colors.foregroundLighter,
-    "activityBarItem.profilesBackground": colors.backgroundLight
 };
+
+const profiles : Editor.Profiles = {
+    "profileBadge.background": colors.backgroundLighter,
+    "profileBadge.foreground": colors.text,
+}
 
 const sideBar : Editor.SideBar = {
     "sideBar.background": colors.backgroundLight,
@@ -234,6 +238,7 @@ const editor : Editor.Editor = {
     "editor.foreground": colors.text,
     "editorLineNumber.foreground": colors.text + "77",
     "editorLineNumber.activeForeground": colors.text,
+    "editorLineNumber.dimmedForeground": colors.text + "22",
     "editorCursor.background": colors.black,
     "editorCursor.foreground": colors.text + "CC",
 
@@ -247,6 +252,8 @@ const editor : Editor.Editor = {
     "editor.wordHighlightBorder": colors.hidden,
     "editor.wordHighlightStrongBackground": colors.foreground + "33",
     "editor.wordHighlightStrongBorder": colors.hidden,
+    "editor.wordHighlightTextBackground": colors.test, //* Unset
+    "editor.wordHighlightTextBorder": colors.unset, //* Unset
 
     "editor.findMatchBackground": colors.unset, //* Unset
     "editor.findMatchHighlightBackground": colors.unset, //* Unset
@@ -328,6 +335,7 @@ const editor : Editor.Editor = {
     "editorOverviewRuler.selectionHighlightForeground": colors.unset, //* Unset
     "editorOverviewRuler.wordHighlightForeground": colors.unset, //* Unset
     "editorOverviewRuler.wordHighlightStrongForeground": colors.unset, //* Unset
+    "editorOverviewRuler.wordHighlightTextForeground": colors.unset, //* Unset
     "editorOverviewRuler.modifiedForeground": colors.unset, //* Unset
     "editorOverviewRuler.addedForeground": colors.unset, //* Unset
     "editorOverviewRuler.deletedForeground": colors.unset, //* Unset
@@ -363,8 +371,9 @@ const editor : Editor.Editor = {
     "editorGutter.addedBackground": colors.unset, //* Unset
     "editorGutter.deletedBackground": colors.unset, //* Unset
     "editorGutter.commentRangeForeground": colors.unset, //* Unset
+    "editorGutter.commentGlyphForground": colors.unset, //* Unset
     "editorGutter.foldingControlForeground": colors.text,
-
+ 
     "editorCommentsWidget.resolvedBorder": colors.unset, //* Unset
     "editorCommentsWidget.unresolvedBorder": colors.unset, //* Unset
     "editorCommentsWidget.rangeBackground": colors.unset, //* Unset
@@ -434,6 +443,7 @@ const peekView : Editor.PeekView = {
     "peekViewEditorGutter.background": colors.infoBackground,
     "peekViewEditor.matchHighlightBackground": colors.unset, //* Unset
     "peekViewEditor.matchHighlightBorder": colors.hidden,
+    "peekViewEditorStickyScroll.background": colors.unset, //* Unset
     "peekViewResult.background": colors.backgroundLight,
     "peekViewResult.fileForeground": colors.text,
     "peekViewResult.lineForeground": colors.text + "BB",
@@ -496,9 +506,6 @@ const statusBar : Editor.StatusBar = {
     "statusBar.noFolderForeground": colors.text,
     "statusBar.noFolderBackground": colors.backgroundDark,
     "statusBar.noFolderBorder": colors.hidden,
-    "statusBar.offlineBackground": colors.unset, //* Unset
-    "statusBar.offlineBorder": colors.unset, //* Unset
-    "statusBar.offlineForeground": colors.unset, //* Unset
     "statusBarItem.activeBackground": colors.white + "44",
     "statusBarItem.hoverBackground": colors.white + "22",
     "statusBarItem.prominentForeground": colors.unset, //? Unknown
@@ -691,6 +698,7 @@ const welcomePage : Editor.WelcomePage = {
     "welcomePage.tileBorder": colors.foreground,
     "walkThrough.embeddedEditorBackground": colors.unset, //? Unknown
     "walkthrough.stepTitle.foreground": colors.text,
+    "welcomeOverlay.background": colors.unset,
 }
 
 const sourceControl : Editor.SourceControl = {
@@ -731,6 +739,7 @@ const settings : Editor.Settings = {
     "settings.focusedRowBorder": colors.hidden,
     "settings.headerBorder": colors.backgroundLighter,
     "settings.sashBorder": colors.backgroundLighter,
+    "settings.settingsHeaderHoverForeground": colors.unset
 }
 
 const breadcrumbs : Editor.BreadCrumbs = {
@@ -832,6 +841,7 @@ const notebook : Editor.Notebook = {
     "notebookStatusErrorIcon.foreground": colors.error,
     "notebookStatusRunningIcon.foreground": colors.text,
     "notebookStatusSuccessIcon.foreground": colors.pass,
+    "notebookEditorOverviewRuler.runningCellForeground": colors.unset, //? Unknown
 }
 
 const chart : Editor.Chart = {
@@ -864,6 +874,7 @@ export const color = {
     ...progressBar,
     ...list,
     ...activityBar,
+    ...profiles,
     ...sideBar,
     ...miniMap,
     ...tabGroup,

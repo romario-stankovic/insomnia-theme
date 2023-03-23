@@ -1,5 +1,7 @@
 type color = string | undefined;
 
+// Reference: https://code.visualstudio.com/api/references/theme-color
+
 export namespace Editor {
     export interface Contrast {
         "contrastActiveBorder": color;
@@ -15,6 +17,7 @@ export namespace Editor {
         "errorForeground": color;
         "icon.foreground": color;
         "widget.shadow": color;
+        "widget.border": color;
         "sash.hoverBorder": color;
     }
 
@@ -136,6 +139,7 @@ export namespace Editor {
         "list.filterMatchBorder": color,
         "list.deemphasizedForeground": color,
         "tree.indentGuidesStroke": color,
+        "tree.inactiveIndentGuidesStroke": color,
         "tree.tableColumnsBorder": color,
         "tree.tableOddRowsBackground": color,
     }
@@ -151,9 +155,11 @@ export namespace Editor {
         "activityBar.activeBorder": color;
         "activityBar.activeBackground": color;
         "activityBar.activeFocusBorder": color;
-        "activityBarItem.profilesForeground": color;
-        "activityBarItem.profilesHoverForeground": color;
-        "activityBarItem.profilesBackground": color;
+    }
+
+    export interface Profiles {
+        "profileBadge.background": color;
+        "profileBadge.foreground": color;
     }
 
     export interface SideBar {
@@ -230,6 +236,7 @@ export namespace Editor {
         "editor.foreground": color;
         "editorLineNumber.foreground": color;
         "editorLineNumber.activeForeground": color;
+        "editorLineNumber.dimmedForeground": color;
         "editorCursor.background": color;
         "editorCursor.foreground": color;
 
@@ -238,11 +245,12 @@ export namespace Editor {
         "editor.inactiveSelectionBackground": color;
         "editor.selectionHighlightBackground": color;
         "editor.selectionHighlightBorder": color;
-
         "editor.wordHighlightBackground": color;
         "editor.wordHighlightBorder": color;
         "editor.wordHighlightStrongBackground": color;
         "editor.wordHighlightStrongBorder": color;
+        "editor.wordHighlightTextBackground": color;
+        "editor.wordHighlightTextBorder": color;
 
         "editor.findMatchBackground": color;
         "editor.findMatchHighlightBackground": color;
@@ -324,6 +332,7 @@ export namespace Editor {
         "editorOverviewRuler.selectionHighlightForeground": color;
         "editorOverviewRuler.wordHighlightForeground": color;
         "editorOverviewRuler.wordHighlightStrongForeground": color;
+        "editorOverviewRuler.wordHighlightTextForeground": color;
         "editorOverviewRuler.modifiedForeground": color;
         "editorOverviewRuler.addedForeground": color;
         "editorOverviewRuler.deletedForeground": color;
@@ -359,6 +368,8 @@ export namespace Editor {
         "editorGutter.addedBackground": color;
         "editorGutter.deletedBackground": color;
         "editorGutter.commentRangeForeground": color;
+        "editorGutter.commentGlyphForground": color; //TODO! Remove this when the typo is fixed
+        //"editorGutter.commentGlyphForeground": color; //TODO! Uncomment this when the typo is fixed
         "editorGutter.foldingControlForeground": color;
 
         "editorCommentsWidget.resolvedBorder": color;
@@ -428,6 +439,7 @@ export namespace Editor {
         "peekViewEditorGutter.background": color;
         "peekViewEditor.matchHighlightBackground": color;
         "peekViewEditor.matchHighlightBorder": color;
+        "peekViewEditorStickyScroll.background": color;
         "peekViewResult.background": color;
         "peekViewResult.fileForeground": color;
         "peekViewResult.lineForeground": color;
@@ -490,9 +502,6 @@ export namespace Editor {
         "statusBar.noFolderForeground": color;
         "statusBar.noFolderBackground": color;
         "statusBar.noFolderBorder": color;
-        "statusBar.offlineBackground": color,
-        "statusBar.offlineBorder": color,
-        "statusBar.offlineForeground": color,
         "statusBarItem.activeBackground": color;
         "statusBarItem.hoverBackground": color;
         "statusBarItem.prominentForeground": color;
@@ -684,6 +693,7 @@ export namespace Editor {
         "welcomePage.tileBorder": color;
         "walkThrough.embeddedEditorBackground": color;
         "walkthrough.stepTitle.foreground": color;
+        "welcomeOverlay.background": color;
     }
 
     export interface SourceControl {
@@ -724,6 +734,7 @@ export namespace Editor {
         "settings.focusedRowBorder": color;
         "settings.headerBorder": color;
         "settings.sashBorder": color;
+        "settings.settingsHeaderHoverForeground": color;
     }
 
     export interface BreadCrumbs {
@@ -824,6 +835,7 @@ export namespace Editor {
         "notebookStatusErrorIcon.foreground": color;
         "notebookStatusRunningIcon.foreground": color;
         "notebookStatusSuccessIcon.foreground": color;
+        "notebookEditorOverviewRuler.runningCellForeground": color;
     }
 
     export interface Chart {
