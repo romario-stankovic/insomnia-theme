@@ -2,6 +2,10 @@
 
 Changes to the "Insomnia Theme" Theme are noted here
 
+## [1.0.6] - 2023-03-25
+
+- Fixed a bug
+
 ## [1.0.5] - 2023-03-23
 
 - Removed svg files from the final package
