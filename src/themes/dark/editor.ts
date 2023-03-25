@@ -252,7 +252,7 @@ const editor : Editor.Editor = {
     "editor.wordHighlightBorder": colors.hidden,
     "editor.wordHighlightStrongBackground": colors.foreground + "33",
     "editor.wordHighlightStrongBorder": colors.hidden,
-    "editor.wordHighlightTextBackground": colors.test, //* Unset
+    "editor.wordHighlightTextBackground": colors.unset, //* Unset
     "editor.wordHighlightTextBorder": colors.unset, //* Unset
 
     "editor.findMatchBackground": colors.unset, //* Unset
