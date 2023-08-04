@@ -261,6 +261,7 @@ const editor : Editor.Editor = {
     "editor.findMatchBorder": colors.hidden,
     "editor.findMatchHighlightBorder": colors.hidden,
     "editor.findRangeHighlightBorder": colors.unset, //* Unset
+    "search.resultsInfoForeground": colors.unset, //* Unset
 
     "searchEditor.findMatchBackground": colors.unset, //* Unset
     "searchEditor.findMatchBorder": colors.unset, //* Unset
@@ -282,8 +283,18 @@ const editor : Editor.Editor = {
     "editor.symbolHighlightBorder": colors.hidden,
     "editorWhitespace.foreground": colors.text + "22",
 
-    "editorIndentGuide.background": colors.text + "55",
-    "editorIndentGuide.activeBackground": colors.text + "99",
+    "editorIndentGuide.background1": colors.text + "55",
+    "editorIndentGuide.activeBackground1": colors.text + "99",
+    "editorIndentGuide.background2": colors.text + "55",
+    "editorIndentGuide.activeBackground2": colors.text + "99",
+    "editorIndentGuide.background3": colors.text + "55",
+    "editorIndentGuide.activeBackground3": colors.text + "99",
+    "editorIndentGuide.background4": colors.text + "55",
+    "editorIndentGuide.activeBackground4": colors.text + "99",
+    "editorIndentGuide.background5": colors.text + "55",
+    "editorIndentGuide.activeBackground5": colors.text + "99",
+    "editorIndentGuide.background6": colors.text + "55",
+    "editorIndentGuide.activeBackground6": colors.text + "99",
 
     "editorInlayHint.background": colors.text + "22",
     "editorInlayHint.foreground": colors.text + "99",
@@ -371,7 +382,8 @@ const editor : Editor.Editor = {
     "editorGutter.addedBackground": colors.unset, //* Unset
     "editorGutter.deletedBackground": colors.unset, //* Unset
     "editorGutter.commentRangeForeground": colors.unset, //* Unset
-    "editorGutter.commentGlyphForground": colors.unset, //* Unset
+    "editorGutter.commentGlyphForeground": colors.unset, //* Unset
+    "editorGutter.commentUnresolvedGlyphForeground": colors.unset, //* Unset
     "editorGutter.foldingControlForeground": colors.text,
  
     "editorCommentsWidget.resolvedBorder": colors.unset, //* Unset
@@ -385,9 +397,9 @@ const editor : Editor.Editor = {
 
 const diffEditor : Editor.DiffEditor = {
     "diffEditor.insertedTextBackground": colors.addedDiff + "11",
-    "diffEditor.insertedTextBorder": colors.hidden, //* Unset
+    "diffEditor.insertedTextBorder": colors.hidden,
     "diffEditor.removedTextBackground": colors.removedDiff + "11",
-    "diffEditor.removedTextBorder": colors.hidden, //* Unset
+    "diffEditor.removedTextBorder": colors.hidden,
     "diffEditor.border": colors.backgroundLighter,
     "diffEditor.diagonalFill": colors.backgroundLighter,
     "diffEditor.insertedLineBackground": colors.addedDiff + "11",
@@ -396,6 +408,28 @@ const diffEditor : Editor.DiffEditor = {
     "diffEditorGutter.removedLineBackground": colors.removedDiff + "33",
     "diffEditorOverview.insertedForeground": colors.addedDiff + "77",
     "diffEditorOverview.removedForeground": colors.removedDiff + "77",
+    "diffEditor.unchangedRegionBackground": colors.unset, //* Unset
+    "diffEditor.unchangedRegionForeground": colors.unset, //* Unset
+    "diffEditor.unchangedCodeBackground": colors.unset, //* Unset
+    "diffEditor.move.border": colors.unset //* Unset
+}
+
+const chat : Editor.Chat = {
+    "chat.requestBackground": colors.unset, //* Unset
+    "chat.requestBorder": colors.unset //* Unset
+}
+
+const inlineChat : Editor.InlineChat = {
+    "inlineChat.background": colors.unset, //* Unset
+    "inlineChat.border": colors.unset, //* Unset
+    "inlineChat.shadow": colors.unset, //* Unset
+    "inlineChat.regionHighlight": colors.unset, //* Unset
+    "inlineChatInput.border": colors.unset, //* Unset
+    "inlineChatInput.focusBorder": colors.unset, //* Unset
+    "inlineChatInput.placeholderForeground": colors.unset, //* Unset
+    "inlineChatInput.background": colors.unset, //* Unset
+    "inlineChatDiff.inserted": colors.unset, //* Unset
+    "inlineChatDiff.removed": colors.unset //* Unset
 }
 
 const widgets : Editor.Widgets = {
@@ -466,6 +500,8 @@ const mergeConflict : Editor.MergeConflict = {
     "editorOverviewRuler.currentContentForeground": colors.unset, //* Unset
     "editorOverviewRuler.incomingContentForeground": colors.unset, //* Unset
     "editorOverviewRuler.commonContentForeground": colors.unset, //* Unset
+    "editorOverviewRuler.commentForeground": colors.unset, //* Unset
+    "editorOverviewRuler.commentUnresolvedForeground": colors.unset, //* Unset
     "mergeEditor.change.background": colors.unset, //* Unset
     "mergeEditor.change.word.background": colors.unset, //* Unset
     "mergeEditor.conflict.unhandledUnfocused.border": colors.unset, //* Unset
@@ -519,7 +555,9 @@ const statusBar : Editor.StatusBar = {
     "statusBarItem.warningForeground": colors.text,
     "statusBarItem.compactHoverBackground": colors.unset, //* Unset
     "statusBarItem.focusBorder": colors.text,
-    "statusBar.focusBorder": colors.hidden
+    "statusBar.focusBorder": colors.hidden,
+    "statusBar.offlineBackground": colors.unset, //* Unset
+    "statusBar.offlineForeground": colors.unset, //* Unset
 };
 
 const titleBar : Editor.TitleBar = {
@@ -642,6 +680,7 @@ const terminal : Editor.Terminal = {
     "terminal.findMatchBorder": colors.unset, //* Unset
     "terminal.findMatchHighlightBackground": colors.unset, //* Unset
     "terminal.findMatchHighlightBorder": colors.unset, //* Unset
+    "terminal.hoverHighlightBackground": colors.unset, //* Unset
     "terminalCursor.background": colors.black,
     "terminalCursor.foreground": colors.text,
     "terminal.dropBackground": colors.unset, //* Unset
@@ -698,7 +737,6 @@ const welcomePage : Editor.WelcomePage = {
     "welcomePage.tileBorder": colors.foreground,
     "walkThrough.embeddedEditorBackground": colors.unset, //? Unknown
     "walkthrough.stepTitle.foreground": colors.text,
-    "welcomeOverlay.background": colors.unset,
 }
 
 const sourceControl : Editor.SourceControl = {
@@ -859,6 +897,11 @@ const ports : Editor.Port = {
     "ports.iconRunningProcessForeground": colors.unset, //* Unset
 }
 
+const commentsView : Editor.CommentsView = {
+    "commentsView.resolvedIcon": colors.unset,
+    "commentsView.unresolvedIcon": colors.unset
+}
+
 export const color = {
     ...contrast,
     ...base,
@@ -880,6 +923,8 @@ export const color = {
     ...tabGroup,
     ...editor,
     ...diffEditor,
+    ...chat,
+    ...inlineChat,
     ...widgets,
     ...peekView,
     ...mergeConflict,
@@ -906,5 +951,6 @@ export const color = {
     ...debugIcons,
     ...notebook,
     ...chart,
-    ...ports
+    ...ports,
+    ...commentsView
 }

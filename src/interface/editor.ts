@@ -255,6 +255,7 @@ export namespace Editor {
         "editor.findMatchBackground": color;
         "editor.findMatchHighlightBackground": color;
         "editor.findRangeHighlightBackground": color;
+        "search.resultsInfoForeground": color;
         "editor.findMatchBorder": color;
         "editor.findMatchHighlightBorder": color;
         "editor.findRangeHighlightBorder": color;
@@ -279,8 +280,18 @@ export namespace Editor {
         "editor.symbolHighlightBorder": color;
         "editorWhitespace.foreground": color;
 
-        "editorIndentGuide.background": color;
-        "editorIndentGuide.activeBackground": color;
+        "editorIndentGuide.background1": color;
+        "editorIndentGuide.background2": color;
+        "editorIndentGuide.background3": color;
+        "editorIndentGuide.background4": color;
+        "editorIndentGuide.background5": color;
+        "editorIndentGuide.background6": color;
+        "editorIndentGuide.activeBackground1": color;
+        "editorIndentGuide.activeBackground2": color;
+        "editorIndentGuide.activeBackground3": color;
+        "editorIndentGuide.activeBackground4": color;
+        "editorIndentGuide.activeBackground5": color;
+        "editorIndentGuide.activeBackground6": color;
 
         "editorInlayHint.background": color;
         "editorInlayHint.foreground": color;
@@ -368,8 +379,8 @@ export namespace Editor {
         "editorGutter.addedBackground": color;
         "editorGutter.deletedBackground": color;
         "editorGutter.commentRangeForeground": color;
-        "editorGutter.commentGlyphForground": color; //TODO! Remove this when the typo is fixed
-        //"editorGutter.commentGlyphForeground": color; //TODO! Uncomment this when the typo is fixed
+        "editorGutter.commentGlyphForeground": color;
+        "editorGutter.commentUnresolvedGlyphForeground": color;
         "editorGutter.foldingControlForeground": color;
 
         "editorCommentsWidget.resolvedBorder": color;
@@ -393,6 +404,28 @@ export namespace Editor {
         "diffEditorGutter.removedLineBackground": color;
         "diffEditorOverview.insertedForeground": color;
         "diffEditorOverview.removedForeground": color;
+        "diffEditor.unchangedRegionBackground": color;
+        "diffEditor.unchangedRegionForeground": color;
+        "diffEditor.unchangedCodeBackground": color;
+        "diffEditor.move.border": color;
+    }
+
+    export interface Chat {
+        "chat.requestBackground": color;
+        "chat.requestBorder": color;
+    }
+
+    export interface InlineChat {
+        "inlineChat.background": color;
+        "inlineChat.border": color;
+        "inlineChat.shadow": color;
+        "inlineChat.regionHighlight": color;
+        "inlineChatInput.border": color;
+        "inlineChatInput.focusBorder": color;
+        "inlineChatInput.placeholderForeground": color;
+        "inlineChatInput.background": color;
+        "inlineChatDiff.inserted": color;
+        "inlineChatDiff.removed": color;
     }
 
     export interface Widgets {
@@ -462,6 +495,8 @@ export namespace Editor {
         "editorOverviewRuler.currentContentForeground": color;
         "editorOverviewRuler.incomingContentForeground": color;
         "editorOverviewRuler.commonContentForeground": color;
+        "editorOverviewRuler.commentForeground": color;
+        "editorOverviewRuler.commentUnresolvedForeground": color;
         "mergeEditor.change.background": color;
         "mergeEditor.change.word.background": color;
         "mergeEditor.conflict.unhandledUnfocused.border": color;
@@ -516,6 +551,8 @@ export namespace Editor {
         "statusBarItem.compactHoverBackground": color;
         "statusBarItem.focusBorder": color;
         "statusBar.focusBorder": color;
+        "statusBar.offlineBackground": color;
+        "statusBar.offlineForeground": color;
     }
 
     export interface TitleBar {
@@ -633,6 +670,7 @@ export namespace Editor {
         "terminal.inactiveSelectionBackground": color;
         "terminal.selectionForeground": color;
         "terminal.findMatchBackground": color;
+        "terminal.hoverHighlightBackground": color;
         "terminal.findMatchBorder": color;
         "terminal.findMatchHighlightBackground": color;
         "terminal.findMatchHighlightBorder": color;
@@ -693,7 +731,6 @@ export namespace Editor {
         "welcomePage.tileBorder": color;
         "walkThrough.embeddedEditorBackground": color;
         "walkthrough.stepTitle.foreground": color;
-        "welcomeOverlay.background": color;
     }
 
     export interface SourceControl {
@@ -851,6 +888,11 @@ export namespace Editor {
 
     export interface Port {
         "ports.iconRunningProcessForeground": color;
+    }
+
+    export interface CommentsView {
+        "commentsView.resolvedIcon": color;
+        "commentsView.unresolvedIcon": color;
     }
 
 }

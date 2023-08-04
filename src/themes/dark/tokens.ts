@@ -557,7 +557,7 @@ export const semanticHighlighting = true
 
 export const semanticTokenColors = {
     "newOperator":"#C586C0",
-		"stringLiteral":"#ce9178",
-		"customLiteral": "#DCDCAA",
-		"numberLiteral": "#b5cea8",
+    "stringLiteral":"#ce9178",
+    "customLiteral": "#DCDCAA",
+    "numberLiteral": "#b5cea8",
 }
