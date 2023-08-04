@@ -35,10 +35,10 @@
     "icon": "icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Romario-Stankovic/InsomniaTheme"
+        "url": "https://github.com/Romario-Stankovic/insomnia-theme"
     },
     "bugs": {
-        "url": "https://github.com/Romario-Stankovic/InsomniaTheme/issues"
+        "url": "https://github.com/Romario-Stankovic/insomnia-theme/issues"
     },
     "scripts": {
         "dev": "tsnd --respawn src/index.ts"
