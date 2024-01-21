@@ -2,7 +2,7 @@
     "name": "insomnia-theme",
     "displayName": "Insomnia Theme",
     "description": "A modern theme for Visual Studio Code",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "publisher": "romario-stankovic",
     "license": "MIT",
     "engines": {
@@ -35,10 +35,10 @@
     "icon": "icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Romario-Stankovic/insomnia-theme"
+        "url": "https://github.com/romario-stankovic/insomnia-theme"
     },
     "bugs": {
-        "url": "https://github.com/Romario-Stankovic/insomnia-theme/issues"
+        "url": "https://github.com/romario-stankovic/insomnia-theme/issues"
     },
     "scripts": {
         "dev": "tsnd --respawn src/index.ts"

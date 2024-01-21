@@ -2,6 +2,10 @@
 
 Changes to the "Insomnia Theme" Theme are noted here
 
+## [1.0.9] - 2024-01-21
+
+- No notable changes
+
 ## [1.0.8] - 2023-08-04
 
 - Fixed broken github links in the package.json file

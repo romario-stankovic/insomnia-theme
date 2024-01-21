@@ -28,7 +28,7 @@ The focus for this theme was to change the background and foreground colors of t
 
 ## ⚠ Issues
 
-To report any issues you find using this extension, please visit [Issues](https://github.com/Romario-Stankovic/InsomniaTheme/issues) on Github.
+To report any issues you find using this extension, please visit [Issues](https://github.com/romario-stankovic/InsomniaTheme/issues) on Github.
 
 ## ⚖ License
 This repository is under the [MIT](LICENSE) license.
