@@ -2,6 +2,10 @@
 
 Changes to the "Insomnia Theme" Theme are noted here
 
+## [1.0.10] - 2024-02-18
+
+- Changed unreachable code style to be grayed out instead of being underlined
+
 ## [1.0.9] - 2024-01-21
 
 - No notable changes
