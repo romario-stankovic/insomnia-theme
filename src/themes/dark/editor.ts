@@ -374,8 +374,8 @@ const editor : Editor.Editor = {
     "problemsWarningIcon.foreground": colors.warning,
     "problemsInfoIcon.foreground": colors.info,
 
-    "editorUnnecessaryCode.border": colors.text, //* Unset
-    "editorUnnecessaryCode.opacity": colors.white + "FF", //* Unset
+    "editorUnnecessaryCode.border": colors.unset, //* Unset
+    "editorUnnecessaryCode.opacity": colors.white + "77", //* Unset
 
     "editorGutter.background": colors.background,
     "editorGutter.modifiedBackground": colors.unset, //* Unset
